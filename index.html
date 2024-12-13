@@ -156,13 +156,13 @@
             </div>
 
             <i
-                class="fa-solid fa-bars bg-zinc-900 lg:hidden text-white px-3 rounded-lg cursor-pointer py-1.5 text-xl"></i>
+              id="openNav"  class="fa-solid fa-bars bg-zinc-900 lg:hidden text-white px-3 rounded-lg cursor-pointer py-1.5 text-xl"></i>
         </div>
 
 
         <!-- responsive nav -->
 
-        <div id="resNav" style="width: 100%;"
+        <div id="resNav" style="width: 0%;"
             class="fixed transition-all duration-500 xl:hidden overflow-hidden top-0 left-0 w-full h-screen bg-black text-white z-50">
             <div class="">
                 <div class="flex p-5 items-center justify-between">
@@ -180,7 +180,7 @@
                                         x-data="accordion(1)">
                                         <h2 @click="handleClick()"
                                             class="flex flex-row justify-between items-center font-semibold p-3 gap-2 cursor-pointer">
-                                            <span class="">Nuestra Escuela</span>
+                                            <span class="text-nowrap">Nuestra Escuela</span>
                                             <i :class="handleRotate()"
                                                 class="fa-solid transition-all duration-500 fa-angle-down text-[#edb901]"></i>
                                         </h2>
@@ -213,7 +213,7 @@
                                         x-data="accordion(2)">
                                         <h2 @click="handleClick()"
                                             class="flex flex-row justify-between items-center font-semibold p-3 gap-2 cursor-pointer">
-                                            <span class="">vinculaci6n con eI Medio</span>
+                                            <span class="text-nowrap">vinculaci6n con eI Medio</span>
                                             <i :class="handleRotate()"
                                                 class="fa-solid transition-all duration-500 fa-angle-down text-[#edb901]"></i>
                                         </h2>
@@ -234,7 +234,7 @@
                                         x-data="accordion(3)">
                                         <h2 @click="handleClick()"
                                             class="flex flex-row justify-between items-center font-semibold p-3 gap-2 cursor-pointer">
-                                            <span class="">InFormaci6n Académica</span>
+                                            <span class="text-nowrap">InFormaci6n Académica</span>
                                             <i :class="handleRotate()"
                                                 class="fa-solid transition-all duration-500 fa-angle-down text-[#edb901]"></i>
                                         </h2>
@@ -278,12 +278,12 @@
             <h2 class="md:text-4xl text-2xl font-bold">Noticias</h2>
             <a href="#" class="">
                 <button
-                    class="px-10 transition-all duration-500 hover:text-black hover:border-black py-2 -skew-x-12 text-lg font-bold bg-transparent border-2 border-zinc-700 text-zinc-700">ver
+                    class="md:px-10 px-8 transition-all duration-500 hover:text-black hover:border-black py-2 -skew-x-12 text-lg font-bold bg-transparent border-2 border-zinc-700 text-zinc-700">ver
                     més</button>
             </a>
         </div>
         <div class="grid grid-cols-2 md:mt-8 mt-5">
-            <div class="relative overflow-hidden row-span-2 group">
+            <div class="relative min-h-40 overflow-hidden row-span-2 group">
                 <img src="./Docs/Assets/img4.jpg" class="w-full h-full object-cover" alt="">
                 <div class="w-full bg-gradient-to-t from-black to-[#0000] h-60 absolute bottom-0 left-0">
                 </div>
@@ -292,7 +292,7 @@
                     FINALIZÖ PERIODO DE INSTRUCCIÖN
                     FINAL</h2>
             </div>
-            <div class="relative overflow-hidden group">
+            <div class="relative min-h-40 overflow-hidden group">
                 <img src="./Docs/Assets/img5.jpg" class="w-full h-full object-cover" alt="">
                 <div class="w-full bg-gradient-to-t from-black to-[#0000] h-60 absolute bottom-0 left-0">
                 </div>
@@ -300,7 +300,7 @@
                     class="text-white transition-all duration-500 group-hover:bottom-8 text-lg font-semibold absolute left-5 bottom-5">
                     GRADUACIÖN CAOSP</h2>
             </div>
-            <div class="relative overflow-hidden group">
+            <div class="relative min-h-40 overflow-hidden group">
                 <img src="./Docs/Assets/img6.jpg" class="w-full h-full object-cover" alt="">
                 <div class="w-full bg-gradient-to-t from-black to-[#0000] h-60 absolute bottom-0 left-0">
                 </div>
@@ -311,12 +311,12 @@
         </div>
     </div>
 
-    <div class="max-w-6xl gap-2 w-full mx-auto p-5 md:pt-12 pt-8 grid grid-cols-3">
+    <div class="max-w-6xl md:gap-2 gap-1 w-full mx-auto p-5 md:pt-12 pt-8 grid grid-cols-3">
         <div class="relative group row-span-2">
             <img src="./Docs/Assets/grid1.jpg" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -327,7 +327,7 @@
             <img src="./Docs/Assets/grid2.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -338,7 +338,7 @@
             <img src="./Docs/Assets/grid3.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -349,7 +349,7 @@
             <img src="./Docs/Assets/grid4.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -360,7 +360,7 @@
             <img src="./Docs/Assets/grid5.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -371,7 +371,7 @@
             <img src="./Docs/Assets/grid6.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -382,7 +382,7 @@
             <img src="./Docs/Assets/grid7.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -393,7 +393,7 @@
             <img src="./Docs/Assets/grid8.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -404,7 +404,7 @@
             <img src="./Docs/Assets/grid9.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -415,7 +415,7 @@
             <img src="./Docs/Assets/grid10.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -426,7 +426,7 @@
             <img src="./Docs/Assets/grid11.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -437,7 +437,7 @@
             <img src="./Docs/Assets/grid12.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -448,7 +448,7 @@
             <img src="./Docs/Assets/grid13.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -459,7 +459,7 @@
             <img src="./Docs/Assets/grid14.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -470,7 +470,7 @@
             <img src="./Docs/Assets/grid15.webp" class=" h-full rounded-lg object-cover" alt="">
             <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
             <div
-                class="group-hover:opacity-100 opacity-0 flex transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
+                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
                 <img src="./Docs/Assets/insta.svg" alt="">
                 <p class="text-zinc-400 text-xs">December 12, 2024</p>
                 <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
@@ -480,11 +480,11 @@
     </div>
 
     <div class="bg-[#5b6770] w-full">
-        <div class="max-w-7xl w-full mx-auto md:py-16 py-8">
+        <div class="max-w-7xl px-4 w-full mx-auto md:py-16 py-8">
             <div class="flex items-center justify-between">
                 <a href="#" class="">
                     <button
-                        class="px-10 transition-all duration-500 hover:text-[#ffca0a] py-2 -skew-x-12 text-lg font-bold bg-transparent border-2 hover:bg-[#968a48]  border-[#edb901]  text-[#edb901]">ver
+                        class="md:px-10 px-8 transition-all duration-500 hover:text-[#ffca0a] py-2 -skew-x-12 text-lg font-bold bg-transparent border-2 hover:bg-[#968a48]  border-[#edb901]  text-[#edb901]">ver
                         més</button>
                 </a>
                 <h2 class="md:text-3xl text-white text-2xl font-bold">Vinculación <br>
@@ -499,12 +499,12 @@
     <div class="w-full md:pb-16 pb-8 relative overflow-hidden"
         style="background: url(./Docs/Assets/bg.jpg) center/cover no-repeat;">
         <div
-            class="max-w-[35%] w-full ml-auto h-20 border-l-2 border-b-2 border-white skew-x-12 bg-[#5b6770] absolute top-0 -right-2">
+            class="max-w-[35%] w-full ml-auto md:h-20 h-10 border-l-2 border-b-2 border-white skew-x-12 bg-[#5b6770] absolute top-0 -right-1">
         </div>
 
 
-        <div class="max-w-5xl w-full mx-auto md:pt-16 pt-8">
-            <h2 class="text-white font-bold md:text-4xl md:mb-14 text-2xl">Te puede interesar</h2>
+        <div class="max-w-5xl p-4 w-full mx-auto md:pt-16 pt-8">
+            <h2 class="text-white font-bold md:text-4xl md:mb-14 mb-6 md:text-start text-center text-2xl md:pt-5 pt-10">Te puede interesar</h2>
             <div class="flex items-center justify-between gap-4">
                 <i class="fa-solid prevBtn fa-chevron-left nextBtn text-3xl text-[#edb901]"></i>
                 <div class="swiper mySwiper">
@@ -552,12 +552,12 @@
 
     </div>
 
-    <div class="bg-[#5d5d5d] w-full p-5 relative">
-        <img src="./Docs/Assets/grayBootom.webp" class="w-full absolute -top-5 rotate-180  left-0" alt="">
+    <div class="bg-[#5d5d5d] w-full p-4 relative">
+        <img src="./Docs/Assets/grayBootom.webp" class="w-full absolute md:-top-5 -top-1 rotate-180  left-0" alt="">
         <div class="max-w-4xl w-full mx-auto gap-8 md:py-10 py-6 flex md:flex-row flex-col justify-center items-center">
             <div class="flex items-center gap-3">
                 <i class="fa-solid fa-star text-lg text-[#edb901]"></i>
-                <p class="text-white text-lg font-semibold">
+                <p class="text-white md:text-lg font-semibold">
                     Medalla SÍGUENOS EN REDES SOCIALES:
                 </p>
             </div>
