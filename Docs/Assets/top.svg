@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="79px" height="82px" viewBox="0 0 79 82" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Boton-subir">
+            <g id="Group-2">
+                <path d="M79,7.10542736e-15 L79,82 L0,82 L0,7.10542736e-15 L13.9125508,0.000412183749 C17.8866841,9.96128576 27.6213522,17 39,17 C50.3786478,17 60.1133159,9.96128576 64.0874492,0.000412183749 L79,7.10542736e-15 Z" id="Combined-Shape" fill="#EFC202"></path>
+                <g id="Group" transform="translate(20.000000, 22.000000)" fill="#000000">
+                    <path d="M8.33468863,15.4258125 L18.9992125,4.72991054 L29.6650864,15.4258125 C30.0468193,15.8083785 30.546597,15.9997367 31.0463747,15.9997367 C31.5461524,15.9997367 32.0462301,15.8083785 32.4275131,15.4258125 C33.190829,14.6603796 33.190829,13.4207634 32.4275131,12.6553305 L20.3802009,0.574187513 C19.6173349,-0.191395838 18.3810901,-0.191395838 17.6179242,0.574187513 L5.57226195,12.6553305 C4.80924602,13.4207634 4.80924602,14.6603796 5.57226195,15.4258125 C6.33527789,16.1913958 7.57167269,16.1913958 8.33468863,15.4258125 Z" id="Path" fill-rule="nonzero"></path>
+                    <text id="Subir" font-family="Roboto-Bold, Roboto" font-size="15.4" font-weight="bold">
+                        <tspan x="0.27265625" y="38">Subir</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
