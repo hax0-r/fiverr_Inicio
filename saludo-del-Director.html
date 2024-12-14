@@ -16,9 +16,10 @@
     <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
 </head>
 
-<body>
+<body class="overflow-x-hidden">
 
-    <div class="min-h-screen w-full overflow-hidden relative">
+    <div class="md:min-h-[12rem] min-h-[7rem] z-50 w-full flex flex-col items-center justify-center relative"
+        style="background: url(./Docs/Assets/img12.jpg) center/cover no-repeat ;">
 
         <div id="searchPopup" style="width: 0; opacity: 0; "
             class="top-0 transition-all duration-500 left-0 p-7 absolute bg-[#ffc700] z-30">
@@ -51,25 +52,13 @@
                 <i class="fa-solid fa-x text-xl pr-3 cursor-pointer" id="closewheel"></i>
             </div>
         </div>
-
-        <img src="./Docs/Assets/overlay2.webp" class="absolute right-20 top-0 z-10 lg:block hidden" alt="">
-        <img src="./Docs/Assets/overlay3.webp" class="absolute right-0 md:top-0 bottom-0 z-10" alt="">
-        <img src="./Docs/Assets/overlay1.png" class="absolute left-0 top-0 z-10" alt="">
-        <img src="./Docs/Assets/line2.png" class="absolute lg:block hidden right-0 top-[25%] z-10" alt="">
-        <img src="./Docs/Assets/circle.svg" class="absolute right-[22.5rem] top-[20.5rem] lg:block hidden z-10" alt="">
-        <img src="./Docs/Assets/line1.png" class="absolute left-[25%] lg:block hidden top-[30%] z-10" alt="">
-
-        <video autoplay muted loop class="absolute top-0 left-0 w-full h-full object-cover">
-            <source src="./Docs/Assets/video.mp4" type="video/mp4">
-        </video>
-
-        <div class="mx-auto max-w-7xl p-5 relative z-20 w-full h-[80px] mt-5 flex items-center justify-between">
+        <div class="mx-auto max-w-7xl p-5 relative z-40 w-full h-[80px] flex items-center justify-between">
             <a href="./index.html">
                 <img src="./Docs/Assets/logo.webp" class="md:h-24 h-16" alt="">
             </a>
             <div class="lg:flex hidden items-center justify-center bg-black -skew-x-[20deg]">
                 <ul class="text-white flex  items-center  justify-center skew-x-[20deg]">
-                    <li class=" bg-black cursor-pointer -skew-x-[20deg] group">
+                    <li class=" bg-black  rek cursor-pointer -skew-x-[20deg] group">
                         <div
                             class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
                         </div>
@@ -80,7 +69,7 @@
                         </div>
 
                         <div
-                            class="absolute top-[60px] left-[83px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
+                            class="absolute border top-[60px] left-[83px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
                             <ul>
                                 <li><a class="block py-2 pt-4 transition-all duration-500 hover:bg-black hover:text-white"
                                         href="./saludo-del-Director.html">saludo del Director</a></li>
@@ -119,7 +108,7 @@
                         </div>
 
                         <div
-                            class="absolute top-[60px] left-[30px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
+                            class="absolute border top-[60px] left-[30px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
                             <ul>
                                 <li><a class="block py-2 pt-4 transition-all duration-500 hover:bg-black hover:text-white"
                                         href="./publicaciones.html">publicaciones</a></li>
@@ -144,7 +133,7 @@
                         </div>
 
                         <div
-                            class="absolute top-[60px] left-[52.5px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
+                            class="absolute border top-[60px] left-[52.5px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
                             <ul>
                                 <li><a class="block py-2 pt-4 transition-all duration-500 hover:bg-black hover:text-white"
                                         href="./perFil-del-0Ficial.html">PerF11 del oftaal</a></li>
@@ -349,290 +338,69 @@
 
     </div>
 
-    <div class="grid grid-cols-2 max-w-7xl gap-5 w-full mx-auto p-5 md:pt-16 pt-8">
-        <img src="./Docs/Assets/spotfy.jpg" class="w-full rounded-lg overflow-hidden col-span-2" alt="">
-        <img src="./Docs/Assets/img1.png" class="w-full rounded-lg overflow-hidden" alt="">
-        <img src="./Docs/Assets/img2.jpg" class="w-full rounded-lg overflow-hidden" alt="">
-        <img src="./Docs/Assets/img3.jpg" class="w-full rounded-lg overflow-hidden col-span-2" alt="">
-    </div>
+    <div class="max-w-7xl mx-auto md:py-16 py-8 p-5 relative overflow-hidden">
 
-    <div class="max-w-6xl gap-5 w-full mx-auto p-5 md:pt-12 pt-8">
-        <div class="flex items-center justify-between">
-            <h2 class="md:text-4xl text-2xl font-bold">Noticias</h2>
-            <a href="#" class="">
-                <button
-                    class="md:px-10 px-8 transition-all duration-500 hover:text-black hover:border-black py-2 -skew-x-12 text-lg font-bold bg-transparent border-2 border-zinc-700 text-zinc-700">ver
-                    més</button>
-            </a>
+        <div class="absolute md:block hidden  top-16 right-0">
+            <div class=" bg-[#fffae6] h-16 w-60 skew-x-[-30deg]"></div>
+            <div class="-translate-x-9   bg-[#ffcc00] h-16 w-60 skew-x-[-30deg]"></div>
         </div>
-        <div class="grid grid-cols-2 md:mt-8 mt-5">
-            <div class="relative min-h-40 overflow-hidden row-span-2 group">
-                <img src="./Docs/Assets/img4.jpg" class="w-full h-full object-cover" alt="">
-                <div class="w-full bg-gradient-to-t from-black to-[#0000] h-60 absolute bottom-0 left-0">
-                </div>
-                <h2
-                    class="text-white transition-all duration-500 group-hover:bottom-8 text-lg font-semibold absolute left-5 bottom-5">
-                    FINALIZÖ PERIODO DE INSTRUCCIÖN
-                    FINAL</h2>
-            </div>
-            <div class="relative min-h-40 overflow-hidden group">
-                <img src="./Docs/Assets/img5.jpg" class="w-full h-full object-cover" alt="">
-                <div class="w-full bg-gradient-to-t from-black to-[#0000] h-60 absolute bottom-0 left-0">
-                </div>
-                <h2
-                    class="text-white transition-all duration-500 group-hover:bottom-8 text-lg font-semibold absolute left-5 bottom-5">
-                    GRADUACIÖN CAOSP</h2>
-            </div>
-            <div class="relative min-h-40 overflow-hidden group">
-                <img src="./Docs/Assets/img6.jpg" class="w-full h-full object-cover" alt="">
-                <div class="w-full bg-gradient-to-t from-black to-[#0000] h-60 absolute bottom-0 left-0">
-                </div>
-                <h2
-                    class="text-white transition-all duration-500 group-hover:bottom-8 text-lg font-semibold absolute left-5 bottom-5">
-                    CONTINÜA PERIODO DE INSTRUCCIÖN</h2>
-            </div>
-        </div>
-    </div>
-
-    <div class="max-w-6xl md:gap-2 gap-1 w-full mx-auto p-5 md:pt-12 pt-8 grid grid-cols-3">
-        <div class="relative group row-span-2">
-            <img src="./Docs/Assets/grid1.jpg" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group">
-            <img src="./Docs/Assets/grid2.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group">
-            <img src="./Docs/Assets/grid3.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group">
-            <img src="./Docs/Assets/grid4.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group">
-            <img src="./Docs/Assets/grid5.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group">
-            <img src="./Docs/Assets/grid6.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group">
-            <img src="./Docs/Assets/grid7.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group row-span-2">
-            <img src="./Docs/Assets/grid8.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group">
-            <img src="./Docs/Assets/grid9.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group">
-            <img src="./Docs/Assets/grid10.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group">
-            <img src="./Docs/Assets/grid11.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group row-span-2">
-            <img src="./Docs/Assets/grid12.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group">
-            <img src="./Docs/Assets/grid13.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group">
-            <img src="./Docs/Assets/grid14.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-        <div class="relative group">
-            <img src="./Docs/Assets/grid15.webp" class=" h-full rounded-lg object-cover" alt="">
-            <i class="fa-solid fa-clone absolute top-3 right-3 text-white"></i>
-            <div
-                class="group-hover:opacity-100 md:flex opacity-0 hidden transition-all duration-500  items-center justify-center flex-col gap-4 bg-[#000000b2] absolute top-0 left-0 w-full h-full rounded-lg p-5 text-center ">
-                <img src="./Docs/Assets/insta.svg" alt="">
-                <p class="text-zinc-400 text-xs">December 12, 2024</p>
-                <P class="text-zinc-300 text-sm">iÜltimos dias siendo alumnos! Los Subalféreces de IV afio se
-                    encuentran en preparaciones para la cere...</P>
-            </div>
-        </div>
-    </div>
-
-    <div class="bg-[#5b6770] w-full">
-        <div class="max-w-7xl px-4 w-full mx-auto md:py-16 py-8">
-            <div class="flex items-center justify-between">
-                <a href="#" class="">
-                    <button
-                        class="md:px-10 px-8 transition-all duration-500 hover:text-[#ffca0a] py-2 -skew-x-12 text-lg font-bold bg-transparent border-2 hover:bg-[#968a48]  border-[#edb901]  text-[#edb901]">ver
-                        més</button>
-                </a>
-                <h2 class="md:text-3xl text-white text-2xl font-bold">Vinculación <br>
-                    con el medio</h2>
-            </div>
-            <h2 class="md:text-3xl text-white mt-16 text-2xl font-bold">Extensión
-            </h2>
-        </div>
-        <div class="max-w-[65%] h-0.5 bg-white"></div>
-    </div>
-
-    <div class="w-full md:pb-16 pb-8 relative overflow-hidden"
-        style="background: url(./Docs/Assets/bg.jpg) center/cover no-repeat;">
-        <div
-            class="max-w-[35%] w-full ml-auto md:h-20 h-10 border-l-2 border-b-2 border-white skew-x-12 bg-[#5b6770] absolute top-0 -right-2">
+        <div class="absolute md:top-24 top-10 md:left-60 right-0 md:opacity-100 opacity-20 -z-10">
+            <div class=" bg-[#fffae6] h-16 w-20 skew-x-[-30deg]"></div>
+            <div class="-translate-x-9   bg-[#ffcc00] h-16 w-20 skew-x-[-30deg]"></div>
         </div>
 
+        <div class="flex items-center gap-3  text-zinc-800">
+            <a href="" class="hover:underline font-medium">Inicio</a>
+            <i class="fa-solid fa-angle-right "></i>
+            <a href="" class="hover:underline font-medium">Saludo del Director</a>
+        </div>
 
-        <div class="max-w-5xl p-4 w-full mx-auto md:pt-16 pt-8">
-            <h2 class="text-white font-bold md:text-4xl md:mb-14 mb-6 md:text-start text-center text-2xl md:pt-5 pt-10">
-                Te puede interesar</h2>
-            <div class="flex items-center justify-between gap-4">
-                <i class="fa-solid prevBtn fa-chevron-left nextBtn text-3xl text-[#edb901]"></i>
-                <div class="swiper mySwiper">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./Docs/Assets/slide1.png"
-                                class="border-b-2 border-[#edb901]" alt=""></div>
-                        <div class="swiper-slide"><img src="./Docs/Assets/slide2.webp"
-                                class="border-b-2 border-[#edb901]" alt=""></div>
-                        <div class="swiper-slide"><img src="./Docs/Assets/slide3.png"
-                                class="border-b-2 border-[#edb901]" alt=""></div>
-                        <div class="swiper-slide"><img src="./Docs/Assets/slide4.png"
-                                class="border-b-2 border-[#edb901]" alt=""></div>
-                        <div class="swiper-slide"><img src="./Docs/Assets/slide5.png"
-                                class="border-b-2 border-[#edb901]" alt=""></div>
-                        <div class="swiper-slide"><img src="./Docs/Assets/slide6.png"
-                                class="border-b-2 border-[#edb901]" alt=""></div>
-                    </div>
-                </div>
-                <i class="fa-solid fa-chevron-right nextBtn text-3xl text-[#edb901]"></i>
+        <h2 class="md:text-4xl text-2xl font-bold z-10 relative mt-8">Saludo del Director</h2>
+
+        <div class="flex gap-3 my-4 md:mt-20 mt-10 items-center justify-end">
+            <p class="font-medium">Comparte en:</p>
+            <div
+                class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                <i class="fa-brands fa-facebook-f text-[#fff]  text-xl"></i>
+            </div>
+            <div
+                class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                <i class="fa-brands fa-twitter text-[#fff]  text-xl"></i>
             </div>
         </div>
-        <img src="./Docs/Assets/videoBottom.webp" class="w-full absolute left-0 bottom-0" alt="">
 
-    </div>
+        <h2 class="md:text-lg font-semibold text-center pt-10">¡Bienvenidos a la Escuela Militar!</h2>
+        <img src="./Docs/Assets/navyOfficer.jpg" class="max-w-[25rem] w-full mx-auto rounded-md md:my-10 my-6" alt="">
 
-    <div class="max-w-7xl w-full mx-auto md:py-16 py-8 p-5">
+        <p>Es un honor dirigirme a Uds. a través de nuestra página web, donde podrán encontrar toda la información
+            asociada a nuestro quehacer. La Escuela Militar es una institución que cuenta con más de 205 años de
+            historia y continúa comprometida con entregar a Chile y particularmente al Ejército, Oficiales virtuosos de
+            las más altas competencias cognitivas, físicas y militares; pero particularmente, portadores de un solido
+            carácter que les permitan tomar decisiones acertadas en las más difíciles circunstancias, con integridad
+            formada a base del mérito, virtud y patriotismo.
+            <br><br>
+            La Escuela Militar fue fundada por el General Bernardo O’Higgins Riquelme el 16 de marzo de 1817, contamos
+            con más de 200 años de experiencia en formar a jóvenes chilenos, cuya vocación de servicio y amor por la
+            patria los ha llevado a integrar las filas de nuestro glorioso Ejército de Chile.
+            <br><br>
 
-        <div class="max-w-4xl gap-3 w-full mx-auto grid md:grid-cols-3 grid-cols-2">
-            <p
-                class="bg-zinc-100 transition-all duration-500 hover:bg-zinc-300 cursor-default md:col-span-1 col-span-2 rounded-lg p-5">
-                Transparencia Activa
-                Ley Transparencia</p>
-            <p class="bg-zinc-100 transition-all duration-500 hover:bg-zinc-300 cursor-default rounded-lg p-5">Historico
-                Abril 2009 -
-                Agosto 2019</p>
-            <p class="bg-zinc-100 transition-all duration-500 hover:bg-zinc-300 cursor-default  rounded-lg p-5">
-                Informaciön Ley
-                Transparencia</p>
-        </div>
+            Nuestro proyecto educativo ha evolucionado a través del tiempo, buscando constantemente premiar el mérito de
+            nuestros alumnos, logrando asociarnos permanentemente con otros estamentos de educación superior y
+            vincularnos con los principales segmentos y actores de la sociedad, lo que nos ha permitido entregar al
+            Ejército y a nuestro país, Oficiales cuya guía son los valores esenciales de nuestro Alcázar: Patriotismo –
+            Disciplina – Integridad – Respeto – Espíritu de Servicio y Honor; cuyo propósito es potenciar y entregar a
+            nuestros egresados las herramientas necesarias para afrontar los desafíos de la profesión militar con
+            confianza y responsabilidad, siendo capaces de ejercer el mando bajo cualquier circunstancia y/o apremio.
+            <br><br>
+            Un afectuoso saludo a cada uno de ustedes y sus familias.
+        </p>
+        <p class="text-center mt-10 font-medium">
+            FERNANDO SILVA RAMÍREZ
+            <span class="block p-2">Coronel</span>
+            Director de la Escuela Militar
+        </p>
 
-        <div class="max-w-5xl gap-3 w-full md:mt-10 mt-5 mx-auto grid md:grid-cols-2 grid-cols-1">
-            <img src="./Docs/Assets/img7.jpg" class="w-full" alt="">
-            <img src="./Docs/Assets/img8.jpg" class="w-full" alt="">
-        </div>
+        <div class="w-full border-b-2 border-[#edb901] bg-gradient-to-t from-[#faedb2] to-[#fff] mt-8 md:h-16 h-10"></div>
 
     </div>
 
@@ -703,39 +471,6 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
     <script src="./Docs/Javascripts/global.js"></script>
-    <script>
-        var swiper = new Swiper(".mySwiper", {
-            slidesPerView: 5,
-            spaceBetween: 10,
-            navigation: {
-                nextEl: ".nextBtn",
-                prevEl: ".prevBtn",
-            },
-            autoplay: {
-                delay: 3000, // Delay in milliseconds
-                disableOnInteraction: false, // Continue autoplay after user interaction
-            },
-            breakpoints: {
-                320: { // For small screens like mobile
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                },
-                640: { // For medium screens like tablets
-                    slidesPerView: 2,
-                    spaceBetween: 15,
-                },
-                768: { // For larger tablets
-                    slidesPerView: 3,
-                    spaceBetween: 20,
-                },
-                1024: { // For desktop screens
-                    slidesPerView: 5,
-                    spaceBetween: 10,
-                },
-            },
-        });
-    </script>
-
 </body>
 
 </html>

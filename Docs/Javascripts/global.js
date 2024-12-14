@@ -9,6 +9,12 @@ const scrollToTop = document.getElementById("scrollToTop")
 const openNav = document.getElementById("openNav")
 const resNav = document.getElementById("resNav")
 const closeNav = document.getElementById("closeNav")
+const searchPopup = document.getElementById("searchPopup")
+const openSearch = document.getElementById("openSearch")
+const closeSearch = document.getElementById("closeSearch")
+const wheelPopup = document.getElementById("wheelPopup")
+const openwheel = document.getElementById("openwheel")
+const closewheel = document.getElementById("closewheel")
 
 openNav.addEventListener('click', () => {
   resNav.style.width = "100%"
@@ -43,4 +49,21 @@ document.addEventListener('alpine:init', () => {
       return this.$store.accordion.tab === this.idx ? `max-height: ${this.$refs.tab.scrollHeight}px` : '';
     }
   }));
+})
+
+openSearch.addEventListener('click',()=>{
+  searchPopup.style.width = "100%"
+  searchPopup.style.opacity = "1"
+})
+closeSearch.addEventListener('click',()=>{
+  searchPopup.style.width = "0"
+  searchPopup.style.opacity = "0"
+})
+openwheel.addEventListener('click',()=>{
+  wheelPopup.style.width = "100%"
+  wheelPopup.style.opacity = "1"
+})
+closewheel.addEventListener('click',()=>{
+  wheelPopup.style.width = "0"
+  wheelPopup.style.opacity = "0"
 })
