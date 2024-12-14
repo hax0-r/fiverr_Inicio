@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="shortcut icon" href="/Docs/Assets" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div class="md:min-h-[12rem] min-h-[7rem] z-50 w-full flex flex-col items-center justify-center relative"
+        style="background: url(./Docs/Assets/img12.jpg) center/cover no-repeat ;">
+
+        <div id="searchPopup" style="width: 0; opacity: 0; "
+            class="top-0 transition-all duration-500 left-0 p-7 absolute bg-[#ffc700] z-30">
+            <div class="max-w-6xl flex items-center justify-center gap-10 w-full mx-auto ">
+
+                <div class="border-b-2 border-black flex items-center w-full">
+                    <input type="text" class="bg-transparent py-2 w-full placeholder:text-zinc-600"
+                        placeholder="Aué estås buscando?">
+                    <i class="fa-solid fa-search text-xl pr-3"></i>
+                </div>
+                <i class="fa-solid fa-x text-xl pr-3 cursor-pointer" id="closeSearch"></i>
+            </div>
+        </div>
+        <div id="wheelPopup" style="width: 0; opacity: 0; "
+            class="top-0 transition-all duration-500 left-0 p-7 absolute bg-[#ffc700] z-30">
+            <div class="max-w-6xl flex items-center justify-center gap-10 w-full mx-auto ">
+                <div class=" flex justify-center gap-5 items-center w-full">
+                    <div class="flex items-center flex-col gap-1">
+                        <p>Contraste</p>
+                        <img src="./Docs/Assets/img9.webp" class="pr-4" alt="">
+                    </div>
+                    <div class="flex items-center flex-col gap-1">
+                        <p>Tamaño de fuente</p>
+                        <div class="flex items-center gap-3">
+                            <img src="./Docs/Assets/img10.webp" class="pr-4" alt="">
+                            <img src="./Docs/Assets/img11.webp" class="pr-4" alt="">
+                        </div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-x text-xl pr-3 cursor-pointer" id="closewheel"></i>
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl p-5 relative z-40 w-full h-[80px] flex items-center justify-between">
+            <a href="./index.html">
+                <img src="./Docs/Assets/logo.webp" class="md:h-24 h-16" alt="">
+            </a>
+            <div class="lg:flex hidden items-center justify-center bg-black -skew-x-[20deg]">
+                <ul class="text-white flex  items-center  justify-center skew-x-[20deg]">
+                    <li class=" bg-black  rek cursor-pointer -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 text-sm  py-5 skew-x-[20deg] font-semibold">
+                            Nuestra
+                            Escuela <i class="fa-solid fa-chevron-down transition-all  group-hover:rotate-180"></i>
+                        </div>
+
+                        <div
+                            class="absolute border top-[60px] left-[83px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
+                            <ul>
+                                <li><a class="block py-2 pt-4 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./saludo-del-Director.html">saludo del Director</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./misión-y-visión.html">Misi6n y visi6n</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Historia.html">Historia</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Himno.html">Himno</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./InFraestructura.html">Infraestructura</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Himnos-y-cantos-militates.html">Himnos y cantos militates</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Anuarios.html">Anuarios</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Nuestro-Personal.html">Nuestro Personal</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./streaming-Admisi6n-2023.html">streaming Admisi6n 2023</a></li>
+                                <li><a class="block py-2 pb-4 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Entrega-de-Espadines-2023.html">Entrega de Espadines 2023</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="cursor-pointer bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 text-sm  py-5 skew-x-[20deg] font-semibold">
+                            vinculaci6n
+                            con el Medio <i class="fa-solid fa-chevron-down transition-all  group-hover:rotate-180"></i>
+                        </div>
+
+                        <div
+                            class="absolute border top-[60px] left-[30px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
+                            <ul>
+                                <li><a class="block py-2 pt-4 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./publicaciones.html">publicaciones</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Exalumnos.html">Exalumnos</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Ventanas-culturales.html">Ventanas culturales</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Modelo-VCM.html">modelo vcm</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="cursor-pointer bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 text-sm  py-5 skew-x-[20deg] font-semibold">
+                            InFormaci6n
+                            Académica <i class="fa-solid fa-chevron-down transition-all  group-hover:rotate-180"></i>
+                        </div>
+
+                        <div
+                            class="absolute border top-[60px] left-[52.5px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
+                            <ul>
+                                <li><a class="block py-2 pt-4 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./perFil-del-0Ficial.html">PerF11 del oftaal</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Plan-de-Estudios-Regular.html">Plan de Estudios Regular</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Plan-de-Estudio-CAOT.html">Plan de Estudio CAOT</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Plan-de-Estudio-CAOB.html">Plan de Estudio CAOB</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Plan-de-Estudio-CAOSP.html">Plan de Estudio CAOSP</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Proyecto-Educativo.html">Proyecto Educativo</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./modelo-pedag6gico.html">modelo pedag6gico</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class=" bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div> <a href="./Noticias.html"
+                            class="block group-hover:text-black transition-all duration-500 px-4 text-sm py-5  skew-x-[20deg] font-semibold">Noticias</a>
+                    </li>
+                    <li id="openSearch" class="cursor-pointer bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 py-[17.9px]  skew-x-[20deg]">
+                            <i class="fa-solid fa-binoculars "></i>
+                        </div>
+                    </li>
+                    <li id="openwheel" class="cursor-pointer bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 py-[17.9px]  skew-x-[20deg]">
+                            <i class="fa-solid fa-wheelchair "></i>
+                        </div>
+                    </li>
+                    <li class=" bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div> <a href=""
+                            class="block group-hover:text-black transition-all duration-500 px-4 py-[17.9px]  skew-x-[20deg]">
+                            <i class="fa-solid fa-user-secret "></i></a>
+                    </li>
+                    <li class=" bg-black -skew-x-[20deg] group">
+                        <div
+                            class="w-full h-full transition-all duration-500 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div> <a href="" class="flex flex-col items-center 
+                            text-black transition-all duration-500 px-4 py-[5.9px]  skew-x-[20deg]">
+                            <img src="./Docs/Assets/star.svg" class="h-6" alt="">
+                            Admisi6n</a>
+                    </li>
+                </ul>
+            </div>
+
+            <i id="openNav"
+                class="fa-solid fa-bars bg-zinc-900 lg:hidden text-white px-3 rounded-lg cursor-pointer py-1.5 text-xl"></i>
+        </div>
+
+
+        <!-- responsive nav -->
+
+        <div id="resNav" style="width: 0%;"
+            class="fixed transition-all duration-500 xl:hidden overflow-hidden top-0 left-0 w-full h-screen bg-black text-white z-50">
+            <div class="">
+                <div class="flex p-5 items-center justify-between">
+                    <a href="./index.html">
+                        <img src="./Docs/Assets/logo.webp" class="h-16" alt="">
+                    </a>
+                    <i class="fa-solid fa-x text-xl pr-3" id="closeNav"></i>
+                </div>
+                <ul class="flex flex-col mt-1 fadeIn font-medium max-h-[80vh] overflow-auto">
+                    <main class="">
+                        <div class="flex justify-center items-start my-2">
+                            <div class="w-full my-1">
+                                <ul class="flex flex-col">
+                                    <li class="border-b-2 py-2 text-[#edb901] duration-500 transition-all"
+                                        x-data="accordion(1)">
+                                        <h2 @click="handleClick()"
+                                            class="flex flex-row justify-between items-center font-semibold p-3 gap-2 cursor-pointer">
+                                            <span class="text-nowrap">Nuestra Escuela</span>
+                                            <i :class="handleRotate()"
+                                                class="fa-solid transition-all duration-500 fa-angle-down text-[#edb901]"></i>
+                                        </h2>
+                                        <div x-ref="tab" :style="handleToggle()"
+                                            class=" overflow-hidden max-h-0 duration-500 transition-all">
+                                            <ul class="pl-5 p-3 space-y-2 flex text-sm flex-col gap-3 text-white">
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./saludo-del-Director.html"> saludo del
+                                                        Director</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./misión-y-visión.html"> Misi6n y
+                                                        visi6n</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Historia.html">
+                                                        Historia</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Himno.html">
+                                                        Himno</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./InFraestructura.html">
+                                                        Infraestructura</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Himnos-y-cantos-militates.html"> Himnos y cantos
+                                                        militates</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Anuarios.html">
+                                                        Anuarios</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Nuestro-Personal.html"> Nuestro
+                                                        Personal</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Trabaja-con-nosotros.html"> Trabaja con
+                                                        nosotros</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./streaming-Admisi6n-2023.html"> streaming Admisi6n
+                                                        2023</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Entrega-de-Espadines-2023.html"> Entrega de
+                                                        Espadines 2023</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="border-b-2 py-2 text-[#edb901] duration-500 transition-all"
+                                        x-data="accordion(2)">
+                                        <h2 @click="handleClick()"
+                                            class="flex flex-row justify-between items-center font-semibold p-3 gap-2 cursor-pointer">
+                                            <span class="text-nowrap">vinculaci6n con eI Medio</span>
+                                            <i :class="handleRotate()"
+                                                class="fa-solid transition-all duration-500 fa-angle-down text-[#edb901]"></i>
+                                        </h2>
+                                        <div x-ref="tab" :style="handleToggle()"
+                                            class=" overflow-hidden max-h-0 duration-500 transition-all">
+                                            <ul class="pl-5 p-3 space-y-2 flex text-sm flex-col gap-3 text-white">
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./publicaciones.html"> publicaciones</a>
+                                                </li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Exalumnos.html">
+                                                        Exalumnos</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Ventanas-culturales.html"> Ventanas
+                                                        Culturales</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Modelo-VCM.html">
+                                                        Modelo VCM</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="border-b-2 py-2 text-[#edb901] duration-500 transition-all"
+                                        x-data="accordion(3)">
+                                        <h2 @click="handleClick()"
+                                            class="flex flex-row justify-between items-center font-semibold p-3 gap-2 cursor-pointer">
+                                            <span class="text-nowrap">InFormaci6n Académica</span>
+                                            <i :class="handleRotate()"
+                                                class="fa-solid transition-all duration-500 fa-angle-down text-[#edb901]"></i>
+                                        </h2>
+                                        <div x-ref="tab" :style="handleToggle()"
+                                            class=" overflow-hidden max-h-0 duration-500 transition-all">
+                                            <ul class="pl-5 p-3 space-y-2 flex text-sm flex-col gap-3 text-white">
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./publicaciones.html"> publicaciones</a>
+                                                </li>
+
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./perFil-del-0Ficial.html"> perFil del
+                                                        OFicial</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="Plan-de-Estudios-Regular.html"> Plan de Estudios
+                                                        Regular</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Plan-de-Estudio-CAOT.html"> Plan de Estudio
+                                                        CAOT</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Plan-de-Estudio-CAOB.html"> Plan de Estudio
+                                                        CAOB</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Plan-de-Estudio-CAOSP.html"> Plan de Estudio
+                                                        CAOSP</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Proyecto-Educativo.html"> Proyecto
+                                                        Educativo</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./modelo-pedag6gico.html"> modelo
+                                                        pedag6gico</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="./Noticias.html"
+                                            class="font-semibold p-3 text-[#edb901] block">Noticias</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </main>
+                </ul>
+            </div>
+        </div>
+
+        <img src="./Docs/Assets/videoBottom.webp" class="w-full z-10 md:translate-y-5 absolute bottom-0 left-0" alt="">
+
+    </div>
+
+    <div class="max-w-7xl mx-auto md:py-16 py-8 p-5 relative overflow-hidden">
+
+        <div class="absolute md:block hidden  top-16 right-0">
+            <div class=" bg-[#fffae6] h-16 w-60 skew-x-[-30deg]"></div>
+            <div class="-translate-x-9   bg-[#ffcc00] h-16 w-60 skew-x-[-30deg]"></div>
+        </div>
+        <div class="absolute md:top-24 top-10 md:left-60 right-0 md:opacity-100 opacity-20 -z-10">
+            <div class=" bg-[#fffae6] h-16 w-20 skew-x-[-30deg]"></div>
+            <div class="-translate-x-9   bg-[#ffcc00] h-16 w-20 skew-x-[-30deg]"></div>
+        </div>
+
+        <div class="flex items-center gap-3  text-zinc-800">
+            <a href="./index.html" class="hover:underline font-medium">Inicio</a>
+            <i class="fa-solid fa-angle-right "></i>
+            <a href="./Plan-de-Estudio-CAOSP.html" class="hover:underline font-medium">CAOSP</a>
+        </div>
+
+        <h2 class="md:text-4xl text-2xl font-bold z-10 relative mt-8">CAOSP</h2>
+
+        <div class="flex gap-3 my-4 md:mt-20 mt-10 items-center justify-end">
+            <p class="font-medium">Comparte en:</p>
+            <div
+                class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                <i class="fa-brands fa-facebook-f text-[#fff]  text-xl"></i>
+            </div>
+            <div
+                class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                <i class="fa-brands fa-twitter text-[#fff]  text-xl"></i>
+            </div>
+        </div>
+
+        <p class="md:mt-10 mt-8">PERFIL DE EGRESO CURSO DE ADOCTRINAMIENTO GENERAL PARA OFICIALES DE LOS SERVICIOS
+            PROFESIONALES
+            <br><br>
+            (Aprobado por OF. DIVEDUC. JEFENS II/b (R) Nº3855/6 DE 04.ENE.2016)
+            <br><br>
+            Curso cuyo proceso de selección es externo al Instituto. Los integrantes desarrollan el curso en la Escuela
+            Militar que les entrega herramientas para integrarse al Ejército y desempeñarse como oficiales en el grado
+            de Capitán, (de los servicios de Justicia Militar, Sanidad, Sanidad Dental, Veterinario o Religioso), en las
+            unidades regimentarias, en sus respectivos puestos, según su área de especialización.
+
+            <br><br>
+            - DEFINICIÓN:
+            <br><br>
+            Oficial en el grado de Capitán, del servicio de Justicia Militar, Sanidad, Sanidad Dental, Veterinario o
+            Religioso que ha adquirido las competencias profesionales militares para desempeñarse en unidades
+            regimentarias, en los puestos y ámbitos de su área específica.
+            <br><br>
+            - ÁREA DE DESEMPEÑO:
+            <br><br>
+            Área Ejercicio del Mando: Comandante de Sección y/o Escalón.
+            <br><br>
+            - COMPETENCIAS:
+            <br><br>
+            Demostrar, en su desempeño profesional y en el servicio respectivo, los conocimientos cognitivos,
+            procedimentales y los fundamentos valóricos doctrinarios de la profesión militar, aplicando las competencias
+            de gestión de mando y liderazgo.
+            <br><br>
+            Incrementar su condición física general, de tal forma que a futuro, con el entrenamiento personal, pueda
+            cumplir con los estándares mínimos en las PSFs.
+            <br><br>
+            Acreditar las conductas propias del militar en sus acciones dentro y fuera de cuartel y desarrollar
+            habilidades del área de combate orientadas al logro de las HBCs, en las futuras acreditaciones.
+
+        </p>
+
+        <img src="./Docs/Assets/img43.jpg" class="w-full max-w-5xl mx-auto md:mt-14 mt-7" alt="">
+
+        <div class="w-full border-b-2 border-[#edb901] bg-gradient-to-t from-[#faedb2] to-[#fff] mt-8 md:h-16 h-10">
+        </div>
+    </div>
+
+    <div class="bg-[#5d5d5d] w-full p-4 relative">
+        <img src="./Docs/Assets/grayBootom.webp" class="w-full absolute md:-top-5 -top-1 rotate-180  left-0" alt="">
+        <div class="max-w-4xl w-full mx-auto gap-8 md:py-10 py-6 flex md:flex-row flex-col justify-center items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-star text-lg text-[#edb901]"></i>
+                <p class="text-white md:text-lg font-semibold">
+                    Medalla SÍGUENOS EN REDES SOCIALES:
+                </p>
+            </div>
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                    <i class="fa-brands fa-facebook-f text-[#5d5d5d]  text-xl"></i>
+                </div>
+                <div
+                    class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                    <i class="fa-brands fa-twitter text-[#5d5d5d]  text-xl"></i>
+                </div>
+                <div
+                    class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                    <i class="fa-brands fa-instagram text-[#5d5d5d]  text-2xl"></i>
+                </div>
+                <div
+                    class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                    <i class="fa-brands fa-youtube text-[#5d5d5d]  text-xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full relative p-5" style="background: url(./Docs/Assets/footer.png) center/cover no-repeat;">
+        <img src="./Docs/Assets/grayBootom.webp" class="w-full absolute top-0 left-0" alt="">
+
+        <div class="max-w-6xl w-full md:py-14 py-8 mx-auto md:grid-cols-3 grid-cols-1 grid gap-3">
+            <div class="w-full">
+                <h2 class="text-[#efc202] text-xl font-semibold mb-6">Accesos a links importantes</h2>
+                <a href="./index.html" class=" text-white hover:underline">Inicio</a> <br>
+                <a href="./Noticias.html" class=" text-white hover:underline mt-1.5">Noticias</a>
+            </div>
+            <div class="w-full">
+                <h2 class="text-[#efc202] text-xl font-semibold mb-6">&nbsp; </h2>
+                <a href="./misión-y-visión.html" class=" text-white hover:underline">Misiön y Visiön</a> <br>
+                <a href="./Plan-de-Estudios-Regular.html" class=" text-white hover:underline mt-1.5">Plan de Estudios
+                    Regular</a>
+            </div>
+            <div class="w-full">
+                <h2 class="text-[#efc202] text-xl font-semibold mb-6">Contáctanos</h2>
+                <div class="flex items-center text-white gap-3">
+                    <i class="fa-solid fa-phone   text-lg"></i>
+                    <a href="" class=" hover:underline">Fono: 2 2661 5000</a> <br>
+                </div>
+                <h2 class="text-[#efc202] text-xl font-semibold mt-6 mb-2">Entrada peatonal</h2>
+                <a class=" text-white">Av. Los Militares 4500</a>
+                <h2 class="text-[#efc202] text-xl font-semibold mt-6 mb-2">Entrada vehicular</h2>
+                <a class=" text-white">Av. Presidente Riesco 4601</a>
+            </div>
+
+        </div>
+        <i class="fa-solid fa-star text-[#edb901] absolute right-[49px] bottom-[70px] text-xl"></i>
+
+        <img src="./Docs/Assets/top.svg" class="absolute right-5 bottom-0 cursor-pointer" id="scrollToTop" alt="">
+    </div>
+    <p class="bg-black text-white md:text-lg p-5 text-right">Políticas de Privacidad.</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="./Docs/Javascripts/global.js"></script>
+</body>
+
+</html>

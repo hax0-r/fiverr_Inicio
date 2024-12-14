@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="shortcut icon" href="/Docs/Assets" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div class="md:min-h-[12rem] min-h-[7rem] z-50 w-full flex flex-col items-center justify-center relative"
+        style="background: url(./Docs/Assets/img12.jpg) center/cover no-repeat ;">
+
+        <div id="searchPopup" style="width: 0; opacity: 0; "
+            class="top-0 transition-all duration-500 left-0 p-7 absolute bg-[#ffc700] z-30">
+            <div class="max-w-6xl flex items-center justify-center gap-10 w-full mx-auto ">
+
+                <div class="border-b-2 border-black flex items-center w-full">
+                    <input type="text" class="bg-transparent py-2 w-full placeholder:text-zinc-600"
+                        placeholder="Aué estås buscando?">
+                    <i class="fa-solid fa-search text-xl pr-3"></i>
+                </div>
+                <i class="fa-solid fa-x text-xl pr-3 cursor-pointer" id="closeSearch"></i>
+            </div>
+        </div>
+        <div id="wheelPopup" style="width: 0; opacity: 0; "
+            class="top-0 transition-all duration-500 left-0 p-7 absolute bg-[#ffc700] z-30">
+            <div class="max-w-6xl flex items-center justify-center gap-10 w-full mx-auto ">
+                <div class=" flex justify-center gap-5 items-center w-full">
+                    <div class="flex items-center flex-col gap-1">
+                        <p>Contraste</p>
+                        <img src="./Docs/Assets/img9.webp" class="pr-4" alt="">
+                    </div>
+                    <div class="flex items-center flex-col gap-1">
+                        <p>Tamaño de fuente</p>
+                        <div class="flex items-center gap-3">
+                            <img src="./Docs/Assets/img10.webp" class="pr-4" alt="">
+                            <img src="./Docs/Assets/img11.webp" class="pr-4" alt="">
+                        </div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-x text-xl pr-3 cursor-pointer" id="closewheel"></i>
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl p-5 relative z-40 w-full h-[80px] flex items-center justify-between">
+            <a href="./index.html">
+                <img src="./Docs/Assets/logo.webp" class="md:h-24 h-16" alt="">
+            </a>
+            <div class="lg:flex hidden items-center justify-center bg-black -skew-x-[20deg]">
+                <ul class="text-white flex  items-center  justify-center skew-x-[20deg]">
+                    <li class=" bg-black  rek cursor-pointer -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 text-sm  py-5 skew-x-[20deg] font-semibold">
+                            Nuestra
+                            Escuela <i class="fa-solid fa-chevron-down transition-all  group-hover:rotate-180"></i>
+                        </div>
+
+                        <div
+                            class="absolute border top-[60px] left-[83px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
+                            <ul>
+                                <li><a class="block py-2 pt-4 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./saludo-del-Director.html">saludo del Director</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./misión-y-visión.html">Misi6n y visi6n</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Historia.html">Historia</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Himno.html">Himno</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./InFraestructura.html">Infraestructura</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Himnos-y-cantos-militates.html">Himnos y cantos militates</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Anuarios.html">Anuarios</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Nuestro-Personal.html">Nuestro Personal</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./streaming-Admisi6n-2023.html">streaming Admisi6n 2023</a></li>
+                                <li><a class="block py-2 pb-4 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Entrega-de-Espadines-2023.html">Entrega de Espadines 2023</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="cursor-pointer bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 text-sm  py-5 skew-x-[20deg] font-semibold">
+                            vinculaci6n
+                            con el Medio <i class="fa-solid fa-chevron-down transition-all  group-hover:rotate-180"></i>
+                        </div>
+
+                        <div
+                            class="absolute border top-[60px] left-[30px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
+                            <ul>
+                                <li><a class="block py-2 pt-4 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./publicaciones.html">publicaciones</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Exalumnos.html">Exalumnos</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Ventanas-culturales.html">Ventanas culturales</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Modelo-VCM.html">modelo vcm</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="cursor-pointer bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 text-sm  py-5 skew-x-[20deg] font-semibold">
+                            InFormaci6n
+                            Académica <i class="fa-solid fa-chevron-down transition-all  group-hover:rotate-180"></i>
+                        </div>
+
+                        <div
+                            class="absolute border top-[60px] left-[52.5px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
+                            <ul>
+                                <li><a class="block py-2 pt-4 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./perFil-del-0Ficial.html">PerF11 del oftaal</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Plan-de-Estudios-Regular.html">Plan de Estudios Regular</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Plan-de-Estudio-CAOT.html">Plan de Estudio CAOT</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Plan-de-Estudio-CAOB.html">Plan de Estudio CAOB</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Plan-de-Estudio-CAOSP.html">Plan de Estudio CAOSP</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Proyecto-Educativo.html">Proyecto Educativo</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./modelo-pedag6gico.html">modelo pedag6gico</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class=" bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div> <a href="./Noticias.html"
+                            class="block group-hover:text-black transition-all duration-500 px-4 text-sm py-5  skew-x-[20deg] font-semibold">Noticias</a>
+                    </li>
+                    <li id="openSearch" class="cursor-pointer bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 py-[17.9px]  skew-x-[20deg]">
+                            <i class="fa-solid fa-binoculars "></i>
+                        </div>
+                    </li>
+                    <li id="openwheel" class="cursor-pointer bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 py-[17.9px]  skew-x-[20deg]">
+                            <i class="fa-solid fa-wheelchair "></i>
+                        </div>
+                    </li>
+                    <li class=" bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div> <a href=""
+                            class="block group-hover:text-black transition-all duration-500 px-4 py-[17.9px]  skew-x-[20deg]">
+                            <i class="fa-solid fa-user-secret "></i></a>
+                    </li>
+                    <li class=" bg-black -skew-x-[20deg] group">
+                        <div
+                            class="w-full h-full transition-all duration-500 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div> <a href="" class="flex flex-col items-center 
+                            text-black transition-all duration-500 px-4 py-[5.9px]  skew-x-[20deg]">
+                            <img src="./Docs/Assets/star.svg" class="h-6" alt="">
+                            Admisi6n</a>
+                    </li>
+                </ul>
+            </div>
+
+            <i id="openNav"
+                class="fa-solid fa-bars bg-zinc-900 lg:hidden text-white px-3 rounded-lg cursor-pointer py-1.5 text-xl"></i>
+        </div>
+
+
+        <!-- responsive nav -->
+
+        <div id="resNav" style="width: 0%;"
+            class="fixed transition-all duration-500 xl:hidden overflow-hidden top-0 left-0 w-full h-screen bg-black text-white z-50">
+            <div class="">
+                <div class="flex p-5 items-center justify-between">
+                    <a href="./index.html">
+                        <img src="./Docs/Assets/logo.webp" class="h-16" alt="">
+                    </a>
+                    <i class="fa-solid fa-x text-xl pr-3" id="closeNav"></i>
+                </div>
+                <ul class="flex flex-col mt-1 fadeIn font-medium max-h-[80vh] overflow-auto">
+                    <main class="">
+                        <div class="flex justify-center items-start my-2">
+                            <div class="w-full my-1">
+                                <ul class="flex flex-col">
+                                    <li class="border-b-2 py-2 text-[#edb901] duration-500 transition-all"
+                                        x-data="accordion(1)">
+                                        <h2 @click="handleClick()"
+                                            class="flex flex-row justify-between items-center font-semibold p-3 gap-2 cursor-pointer">
+                                            <span class="text-nowrap">Nuestra Escuela</span>
+                                            <i :class="handleRotate()"
+                                                class="fa-solid transition-all duration-500 fa-angle-down text-[#edb901]"></i>
+                                        </h2>
+                                        <div x-ref="tab" :style="handleToggle()"
+                                            class=" overflow-hidden max-h-0 duration-500 transition-all">
+                                            <ul class="pl-5 p-3 space-y-2 flex text-sm flex-col gap-3 text-white">
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./saludo-del-Director.html"> saludo del
+                                                        Director</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./misión-y-visión.html"> Misi6n y
+                                                        visi6n</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Historia.html">
+                                                        Historia</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Himno.html">
+                                                        Himno</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./InFraestructura.html">
+                                                        Infraestructura</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Himnos-y-cantos-militates.html"> Himnos y cantos
+                                                        militates</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Anuarios.html">
+                                                        Anuarios</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Nuestro-Personal.html"> Nuestro
+                                                        Personal</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Trabaja-con-nosotros.html"> Trabaja con
+                                                        nosotros</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./streaming-Admisi6n-2023.html"> streaming Admisi6n
+                                                        2023</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Entrega-de-Espadines-2023.html"> Entrega de
+                                                        Espadines 2023</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="border-b-2 py-2 text-[#edb901] duration-500 transition-all"
+                                        x-data="accordion(2)">
+                                        <h2 @click="handleClick()"
+                                            class="flex flex-row justify-between items-center font-semibold p-3 gap-2 cursor-pointer">
+                                            <span class="text-nowrap">vinculaci6n con eI Medio</span>
+                                            <i :class="handleRotate()"
+                                                class="fa-solid transition-all duration-500 fa-angle-down text-[#edb901]"></i>
+                                        </h2>
+                                        <div x-ref="tab" :style="handleToggle()"
+                                            class=" overflow-hidden max-h-0 duration-500 transition-all">
+                                            <ul class="pl-5 p-3 space-y-2 flex text-sm flex-col gap-3 text-white">
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./publicaciones.html"> publicaciones</a>
+                                                </li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Exalumnos.html">
+                                                        Exalumnos</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Ventanas-culturales.html"> Ventanas
+                                                        Culturales</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Modelo-VCM.html">
+                                                        Modelo VCM</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="border-b-2 py-2 text-[#edb901] duration-500 transition-all"
+                                        x-data="accordion(3)">
+                                        <h2 @click="handleClick()"
+                                            class="flex flex-row justify-between items-center font-semibold p-3 gap-2 cursor-pointer">
+                                            <span class="text-nowrap">InFormaci6n Académica</span>
+                                            <i :class="handleRotate()"
+                                                class="fa-solid transition-all duration-500 fa-angle-down text-[#edb901]"></i>
+                                        </h2>
+                                        <div x-ref="tab" :style="handleToggle()"
+                                            class=" overflow-hidden max-h-0 duration-500 transition-all">
+                                            <ul class="pl-5 p-3 space-y-2 flex text-sm flex-col gap-3 text-white">
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./publicaciones.html"> publicaciones</a>
+                                                </li>
+
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./perFil-del-0Ficial.html"> perFil del
+                                                        OFicial</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="Plan-de-Estudios-Regular.html"> Plan de Estudios
+                                                        Regular</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Plan-de-Estudio-CAOT.html"> Plan de Estudio
+                                                        CAOT</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Plan-de-Estudio-CAOB.html"> Plan de Estudio
+                                                        CAOB</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Plan-de-Estudio-CAOSP.html"> Plan de Estudio
+                                                        CAOSP</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Proyecto-Educativo.html"> Proyecto
+                                                        Educativo</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./modelo-pedag6gico.html"> modelo
+                                                        pedag6gico</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="./Noticias.html"
+                                            class="font-semibold p-3 text-[#edb901] block">Noticias</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </main>
+                </ul>
+            </div>
+        </div>
+
+        <img src="./Docs/Assets/videoBottom.webp" class="w-full z-10 md:translate-y-5 absolute bottom-0 left-0" alt="">
+
+    </div>
+
+    <div class="max-w-7xl mx-auto md:py-16 py-8 p-5 relative overflow-hidden">
+
+        <div class="absolute md:block hidden  top-16 right-0">
+            <div class=" bg-[#fffae6] h-16 w-60 skew-x-[-30deg]"></div>
+            <div class="-translate-x-9   bg-[#ffcc00] h-16 w-60 skew-x-[-30deg]"></div>
+        </div>
+        <div class="absolute md:top-24 top-10 md:left-60 right-0 md:opacity-100 opacity-20 -z-10">
+            <div class=" bg-[#fffae6] h-16 w-20 skew-x-[-30deg]"></div>
+            <div class="-translate-x-9   bg-[#ffcc00] h-16 w-20 skew-x-[-30deg]"></div>
+        </div>
+
+        <div class="flex items-center gap-3  text-zinc-800">
+            <a href="./index.html" class="hover:underline font-medium">Inicio</a>
+            <i class="fa-solid fa-angle-right "></i>
+            <a href="./Ventanas-culturales.html" class="hover:underline font-medium">Ventanas Culturales</a>
+        </div>
+
+        <h2 class="md:text-4xl text-2xl font-bold z-10 relative mt-8">Ventanas Culturales</h2>
+
+        <h3 class="md:text-3xl text-xl md:mt-20 mt-7 font-semibold text-center">“Territorios definidos: costumbres,
+            tradiciones y
+            patrimonio”</h3>
+
+        <div class="grid grid-cols-2 gap-2 md:mt-10  mt-5">
+            <img src="./Docs/Assets/img23.jpg" alt="">
+            <img src="./Docs/Assets/img24.jpg" alt="">
+            <img src="./Docs/Assets/img25.jpg" alt="">
+            <img src="./Docs/Assets/img26.jpg" alt="">
+            <img src="./Docs/Assets/img27.jpg" alt="">
+            <img src="./Docs/Assets/img23.jpg" alt="">
+        </div>
+
+        <p class="text-zinc-800 py-5 md:pt-12">
+            Este 06 de mayo se inauguró la sexta versión del proyecto cultural “Ventanas Culturales”, que en esta
+            oportunidad, en la reja perimetral de nuestro instituto por calle Los Militares, la exposición titulada
+            “Territorios definidos: costumbres, tradiciones y patrimonio”, cuenta con 14 imágenes sobre algunos íconos
+            de nuestro país como la fiesta de San Miguel de Quillagua en Antofagasta en la zona norte; la Plaza de Armas
+            y La Vega en la Región Metropolitana; y el Cementerio Municipal de Punta Arenas en la zona austral, entre
+            otros.
+            <br><br>
+            El proyecto Ventanas Culturales, que anteriormente ha exhibido obras de artistas con capacidades especiales
+            y de mujeres en reinserción social después de haber estado privadas de libertad, tiene como curador a Felipe
+            Forteza, organizado por Teresita Sahli, de Arte y Ciudad y con el apoyo de Caja los Andes, tiene como
+            objetivo promover el conocimiento de nuestra historia, generando vínculos con la sociedad, potenciando el
+            circuito cultural nacional y la difusión de las artes visuales.
+            <br><br>
+            Esta sexta muestra, las fotografías corresponden a artistas chilenos como Andrea Brunson, Cristián Aninat,
+            Felipe Coddou, Angélica Araya, Chris Malebrán y Gonzalo Vial.
+            <br><br>
+            En la jornada de inauguración, el Gerente de Empresas de Caja Los Andes Sr. José Miguel Avendaño, destacó
+            que: “este es un espacio de encuentro y reflexión ciudadana, en un encuentro cívico militar, apoyando y
+            contribuyendo a acercar la cultura a la comunidad”.
+            <br><br>
+            A continuación, la Directora de la Fundación Arte y Ciudad Sra. Teresita Sahlí, señaló que: “esta es una
+            ventana que se abre y une el mundo cívico y el militar. Esta muestra nos invita a recorrer nuestra
+            geografía, conociendo más de nuestras costumbres, tradiciones y patrimonio”.
+            <br><br>
+            En representación de la Alcaldesa de la Municipalidad Las Condes, el Sr. Rafael Izquierdo, felicitó a la
+            Escuela Militar, “tan importante vecino de la comuna, por instancias como esta, de encuentro y unión con la
+            ciudadanía”.
+            <br><br>
+            Por su parte, el Director de la Escuela Militar, Coronel Fernando Silva Ramírez, manifestó que: “el objetivo
+            de esta muestra se ha cumplido, los insto a conectarse con estas 14 imágenes llenas de vida, color y
+            alegría, que nos permite conocer la importancia de nuestros espacios, de la inclusión, la sustentabilidad y
+            la relevancia de lo tangible e intangible”.
+            <br><br>
+            Posterior al corte de cinta, los presentes en la ceremonia de inauguración, recorrieron la muestra artística
+            que a partir de estos momentos, puede ser recorrida por toda la ciudadanía.
+        </p>
+
+        <h3 class="md:text-3xl text-xl md:mt-12 mt-4 font-semibold text-center">“Conexión, territorios definidos: norte,
+            centro y sur” </h3>
+        <div class="grid grid-cols-2 gap-2 md:mt-10  mt-5">
+            <img src="./Docs/Assets/img28.jpeg" alt="">
+            <img src="./Docs/Assets/img29.jpeg" alt="">
+            <img src="./Docs/Assets/img30.jpeg" alt="">
+            <img src="./Docs/Assets/img28.jpeg" alt="">
+            <img src="./Docs/Assets/img29.jpeg" alt="">
+            <img src="./Docs/Assets/img30.jpeg" alt="">
+        </div>
+        <p class="text-zinc-800 py-5 md:pt-12">Este 22 de octubre en el Hall de Honor de nuestro instituto, se realizó
+            la ceremonia de inauguración del
+            quinto ciclo del proyecto “Ventanas Culturales”, que en esta ocasión lleva de nombre “Conexión, territorios
+            definidos: norte, centro y sur”, que se encuentra en la reja perimetral desde la guardia de Av. Los
+            Militares hasta Av. Américo Vespucio.
+            <br><br>
+            El Ejército, a través de la Escuela Militar, en conjunto con Caja Los Andes, la Corporación Arte y Ciudad y
+            el curador Luis Felipe Forteza, una vez más se acerca a la comunidad buscando contribuir al desarrollo de la
+            cultura con una nueva manifestación artística, albergada en su proyecto “Ventanas Culturales”, buscando
+            generar vínculos con la sociedad, potenciando el circuito cultural nacional y la difusión de las artes
+            visuales.
+            <br><br>
+            En esta exhibición, en que participaron los fotógrafos Andrea Brunson, Angélica Araya, Cris Malebrán,
+            Cristián Aninat, Felipe Coddou, Gonzalo Vial y Leo Urriola, se presentan una serie de paisajes como el
+            Volcán Tarapacá en Putre, en la Región de Arica y Parinacota; la Oficina Salitrera Pedro de Valdivia, en
+            Tocopilla, en la Región de Antofagasta; el Parque Bicentenario y Cascadas de Las Ánimas en San José de
+            Maipo, en la Región Metropolitana y el Parque Nacional Torres del Paine y Fuerte Bulnes en Puerto Natales en
+            la región de Magallanes y la Antártida chilena, entre otras, que develan las diferencias del largo y angosto
+            territorio que habitamos, desde el árido norte, hasta el exuberante sur, sin dejar de lado la zona central.
+            <br><br>
+            En la oportunidad, el Director de la Escuela Militar, Coronel Francisco Arellano Soffia se dirigió a los
+            presentes destacando sobre este proyecto de “Ventanas Culturales” que comenzó el año 2018, que “los
+            objetivos de cada muestra se han cumplido. Los invito a descubrir la conexión que se produce con esta obra
+            llena de vida, colocada a disposición de la ciudadanía, generando un acercamiento con ella. En cada foto se
+            logra un momento mágico”, señaló, junto con reconocer a quienes han permitido concretar esta nueva muestra,
+            especialmente a los fotógrafos que han participado con su trabajo.
+            <br><br>
+            Posterior a ello, los presentes en la ceremonia visitaron la muestra, donde había un cadete encargado de
+            explicar el significado de cada una de las obras.
+        </p>
+        <h3 class="md:text-3xl text-xl md:mt-12 mt-4 font-semibold text-center">“HEROÍNAS”
+        </h3>
+        <div class="grid grid-cols-2 gap-2 md:mt-10  mt-5">
+            <img src="./Docs/Assets/img31.jpg" alt="">
+            <img src="./Docs/Assets/img32.jpg" alt="">
+            <img src="./Docs/Assets/img33.jpg" alt="">
+            <img src="./Docs/Assets/img31.jpg" alt="">
+            <img src="./Docs/Assets/img32.jpg" alt="">
+            <img src="./Docs/Assets/img33.jpg" alt="">
+        </div>
+        <p class="text-zinc-800 py-5 md:pt-12">El 21 de diciembre y con la presencia de Director de la Escuela Militar,
+            Coronel Francisco Arellano Soffia, el representante del Gerente General de Caja Los Andes, Alejandro
+            Fuenzalida y la Gerente General de “Arte y Ciudad” Teresita Sahle, se realizó la inauguración de “Heroínas”,
+            la cuarta versión del proyecto “Ventanas Culturales”.
+            <br><br>
+            Organizada por “Arte y cuidad gestión cultural” y auspiciado por Caja Los Andes, siempre comprometida con el
+            arte y la inclusión, en esta oportunidad, el Ejército, a través de nuestro instituto, una vez más se acerca
+            a la comunidad buscando contribuir al desarrollo de la cultura con una nueva manifestación artística,
+            albergada en su proyecto “Ventanas Culturales”. Por medio de esta iniciativa, busca generar vínculos con la
+            sociedad, potenciando el circuito nacional y la difusión de las artes visuales.
+            <br><br>
+            El Director del instituto recordó que hace 3 años comenzó el proyecto de “Ventanas Culturales”, teniendo una
+            muy buena recepción de parte del público que ha tenido la posibilidad de recorrer las muestras que se han
+            instalado en la reja perimetral desde la guardia de Los Militares hasta Av. Américo Vespucio, que en esta
+            oportunidad muestra la total incorporación de la mujer al Ejército. El representante de Caja Los Andes,
+            destacó que se sienten agradecidos por aportar a la gestión realizada, que genera cultura a la sociedad,
+            uniendo al Ejército con la ciudadanía. Por su parte, la Gerente General de “Arte y Ciudad”, manifestó que
+            “es un honor inaugurar “Heroínas”, muestra de un valor inconmensurable”. Además de agradecer a todos los
+            involucrados en el proyecto, dijo esperar seguir apoyando la cultura junto a nuestro instituto.
+            <br><br>
+            En esta oportunidad, la exhibición que presenta una serie de fotografías de mujeres que forman parte de la
+            familia castrense, cumpliendo cada una de ellas diversas funciones, siendo todas fundamentales para el
+            desarrollo y desempeño del Ejército, busca dar a conocer a su gente, su historia y sus valores por medio del
+            rol de la mujer en el Ejército, a las que calificó de heroínas, personas que realizan una acción abnegada en
+            beneficio de una causa noble.
+            <br><br>
+            Para este proyecto, destacadas fotógrafas entraron en el mundo íntimo de catorce mujeres que son parte de la
+            institución, buscando descubrir su vida interior e intereses, demostrando algo que intuimos se develaría,
+            sin importar de donde provengamos o a la que no dediquemos, somos todos iguales. Tenemos familias, amigos,
+            pasatiempos, problemas, penas y alegrías.
+            <br><br>
+            Las fotografiadas, de distintas edades, formaciones e intereses, nos abrieron sus puertas, encontrándonos
+            con mujeres que aunque tengan la disciplina para pilotear helicópteros, mantener armamentos, ser ingenieras,
+            escoltas presidenciales o iniciar sus carreras siendo alumnas, llegan a sus casas, leen, hacen deporte,
+            cocinan, bailan, cuidan animales, escriben o solo descansan de un arduo día.
+        </p>
+
+        <div class="mt-8 max-w-xl md:mt-10 w-full mx-auto">
+            <iframe class="w-full rounded-lg md:h-80 h-44"
+                src="https://www.youtube.com/embed/Rv-m7tKGceA?si=b-HEQZg8CmjCoRlT" title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <h3 class="md:text-3xl text-xl md:mt-16 mt-4 font-semibold text-center">NUEVA EXPOSICIÓN DE VENTANAS CULTURALES
+        </h3>
+        <div class="grid grid-cols-2 gap-2 md:mt-10  mt-5">
+            <img src="./Docs/Assets/img29.jpeg" alt="">
+            <img src="./Docs/Assets/img30.jpeg" alt="">
+            <img src="./Docs/Assets/img28.jpeg" alt="">
+            <img src="./Docs/Assets/img29.jpeg" alt="">
+        </div>
+        <p class="text-zinc-800 py-5 md:pt-12">A partir del 17 de diciembre del 2019, en la reja perimetral de nuestro
+            instituto, desde la guardia de calle Los Militares hasta Av. Américo Vespucio, se pudo apreciar una nueva
+            exposición del proyecto “Ventanas Culturales”, llamado “Tierra de Campeones”.
+            <br><br>
+            En la ceremonia de inauguración realizada en el Hall de Honor de la Escuela Militar, que contó con la
+            presencia de autoridades civiles y militares, se presentó una serie de pinturas fotografiadas de personajes
+            considerados “campeones”, buscando de esta forma, contribuir al desarrollo de la cultura con una nueva
+            manifestación artística.
+            <br><br>
+            Los nuevos trabajos que componen esta muestra, fueron interpretados y pintados por personas en situación de
+            discapacidad cognitiva, de dos instituciones, que a través del arte terapia han facilitado su desarrollo e
+            inclusión: ellas son ARTEDOWN e ILUMINOARTE y los talentosos creadores de estas imágenes son los artistas
+            Alejandro Fernández, Alejandra Muñoz, Almendra Reyes, Andrea Delle- Donne, Clarisa Villarroel, Diego Lagos,
+            Isaac Rodríguez, José Miguel Cuevas, Marie Arteaga- la única artista independiente-, Marcelo Quintero,
+            Mauricio Fiedler, Mayra Martínez, Paula Fuenzalida y Ramón Cañas.
+            <br><br>
+            En la ocasión, representando a Caja Los Andes, su Gerente de las FFAA y de Orden y Seguridad, Alejandro
+            Fuenzalida Carmona, manifestó el orgullo de ser parte de esta muestra. Por su parte, la Directora Ejecutiva
+            de la Corporación Iluminoarte, María Nieves Catrón Aparicio, destacó que es muy importante que la comunidad
+            conozca estas obras de arte inclusivo que vincula retratos de héroes de nuestra historia.
+            <br><br>
+            “Por medio de esta iniciativa, la institución busca incrementar los vínculos con la sociedad, potenciando el
+            circuito cultural nacional y la difusión de las artes visuales, a través de imágenes facilitadas a un grupo
+            de jóvenes con habilidades diferentes, quienes con su talento, pincel, acuarela y la información histórica
+            de cada uno de ellos, dieron vida y forma a nuevos modelos, pero con el mismo principio que esas obras
+            fueron creadas: honrar a nuestros héroes y heroínas”, señaló el director de la escuela militar, Francisco
+            Arellano Soffia.
+            <br><br>
+            Este proyecto va en directo beneficio de la inclusión social, cultural y laboral de las personas en
+            situación de discapacidad, colaborando y generando espacios artísticos inclusivos, sustentados en el derecho
+            a la igualdad de oportunidades, buscando obtener su reinserción social y el disfrute de su existencia,
+            eliminando cualquier forma de discriminación. Como toda expresión no verbal, el arte favorece la
+            exploración, expresión y comunicación de aspectos de los que no siempre somos conscientes, ayudándonos a
+            expresar sentimientos, facilitando la reflexión y la comunicación.
+        </p>
+        <h3 class="md:text-3xl text-xl md:mt-10 mt-4 font-semibold text-center">CULTURA E INCLUSIÓN</h3>
+        <div class="grid grid-cols-2 gap-2 md:mt-10  mt-5">
+            <img src="./Docs/Assets/img34.jpg" alt="">
+            <img src="./Docs/Assets/img35.jpg" alt="">
+            <img src="./Docs/Assets/img30.jpeg" alt="">
+            <img src="./Docs/Assets/img28.jpeg" alt="">
+            <img src="./Docs/Assets/img35.jpg" alt="">
+            <img src="./Docs/Assets/img34.jpg" alt="">
+        </div>
+        <p class="text-zinc-800 py-5 md:pt-12">El 20 de marzo del 2019, con la presencia del Ministro de Defensa
+            Nacional, Alberto Espina O.; el Comandante de Educación y Doctrina, General de División Javier Iturriaga del
+            Campo; la Directora Ejecutiva de de la Fundación Arte y Ciudad, Teresita Sahli; el Gerente de Operación de
+            Canales RM y Empresas de Caja Los Andes, Roberto Cartes Santa María y autoridades e invitados, se inauguró
+            la exposición “Metamorfosis”, como parte de las actividades culturales bajo el proyecto Ventanas Culturales,
+            desarrollado por nuestro instituto y apoyado por “Caja Los Andes”.
+            <br><br>
+            En conjunto con la “Fundación Paternitas”, el Ejército, a través de la Escuela Militar inició un ciclo de
+            muestras que tienen en común la inclusión de personas vulnerables, niños y jóvenes con habilidades
+            especiales y un grupo de fotógrafos mayores de 60 años. Ubicada en la reja perimetral del instituto, se
+            busca generar vínculos con la sociedad, potenciando el circuito cultural nacional y la difusión de las artes
+            visuales.
+            <br><br>
+            “Metamorfosis”, gestionado por “Arte y Ciudad, y bajo la curatoría del gestor cultural y fotógrafo Felipe
+            Forteza, reunió a mujeres, qué habiendo sido privadas de libertad por distintas circunstancias, hoy quieren
+            reinsertarse a la sociedad de la mano de Fundación Paternitas. Nataly Adonis, Claudia Farias, Karol
+            Henríquez, Tania Mamani, Nicole Sanhueza y Javiera Seguel, junto a su profesor, Jorge Peña y Lillo, dan fe
+            que todo es posible.
+            <br><br>
+            Catorce artículos, entre los que se encuentran cascos, botas, uniformes y accesorios como botones,
+            cinturones, fueron entregados a las artistas de “Fundación Paternitas”, siendo intervenidos a través de
+            diversas técnicas como un colectivo femenino que poco a poco encuentran en el arte una reinvención y
+            validación personal.
+            <br><br>
+            El Director de la Escuela Militar, manifestó que esta iniciativa fortalece el arraigo y participación
+            colectiva, logrando un acercamiento cívico militar, convirtiendo al instituto en un polo cultural abierto,
+            gracias a una exposición de alto impacto urbano importante. A continuación, el Ministro Espina destacó que
+            “hay un trabajo de inclusión social muy valioso. En la Escuela Militar están los valores que representan
+            nuestra soberanía e independencia y en la muestra se puede apreciar el honor, la disciplina y los valores
+            que representan a la institución”.
+            <br><br>
+            Posterior al corte de cinta, los presentes en la inauguración realizaron un recorrido por la exposición,
+            escuchando a cadetes de la Escuela Militar, quienes explicaron cada uno de los 14 cuadros de la muestra que
+            contempla “Metamorfosis”.
+        </p>
+        <h3 class="md:text-3xl text-xl md:mt-10 mt-4 font-semibold text-center">INAUGURACIÓN PROYECTO “VENTANAS CULTURALES”</h3>
+
+
+
+    </div>
+
+    <div class="bg-[#5d5d5d] w-full p-4 relative">
+        <img src="./Docs/Assets/grayBootom.webp" class="w-full absolute md:-top-5 -top-1 rotate-180  left-0" alt="">
+        <div class="max-w-4xl w-full mx-auto gap-8 md:py-10 py-6 flex md:flex-row flex-col justify-center items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-star text-lg text-[#edb901]"></i>
+                <p class="text-white md:text-lg font-semibold">
+                    SÍGUENOS EN REDES SOCIALES:
+                </p>
+            </div>
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                    <i class="fa-brands fa-facebook-f text-[#5d5d5d]  text-xl"></i>
+                </div>
+                <div
+                    class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                    <i class="fa-brands fa-twitter text-[#5d5d5d]  text-xl"></i>
+                </div>
+                <div
+                    class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                    <i class="fa-brands fa-instagram text-[#5d5d5d]  text-2xl"></i>
+                </div>
+                <div
+                    class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                    <i class="fa-brands fa-youtube text-[#5d5d5d]  text-xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full relative p-5" style="background: url(./Docs/Assets/footer.png) center/cover no-repeat;">
+        <img src="./Docs/Assets/grayBootom.webp" class="w-full absolute top-0 left-0" alt="">
+
+        <div class="max-w-6xl w-full md:py-14 py-8 mx-auto md:grid-cols-3 grid-cols-1 grid gap-3">
+            <div class="w-full">
+                <h2 class="text-[#efc202] text-xl font-semibold mb-6">Accesos a links importantes</h2>
+                <a href="./index.html" class=" text-white hover:underline">Inicio</a> <br>
+                <a href="./Noticias.html" class=" text-white hover:underline mt-1.5">Noticias</a>
+            </div>
+            <div class="w-full">
+                <h2 class="text-[#efc202] text-xl font-semibold mb-6">&nbsp; </h2>
+                <a href="./misión-y-visión.html" class=" text-white hover:underline">Misiön y Visiön</a> <br>
+                <a href="./Plan-de-Estudios-Regular.html" class=" text-white hover:underline mt-1.5">Plan de Estudios
+                    Regular</a>
+            </div>
+            <div class="w-full">
+                <h2 class="text-[#efc202] text-xl font-semibold mb-6">Contáctanos</h2>
+                <div class="flex items-center text-white gap-3">
+                    <i class="fa-solid fa-phone   text-lg"></i>
+                    <a href="" class=" hover:underline">Fono: 2 2661 5000</a> <br>
+                </div>
+                <h2 class="text-[#efc202] text-xl font-semibold mt-6 mb-2">Entrada peatonal</h2>
+                <a class=" text-white">Av. Los Militares 4500</a>
+                <h2 class="text-[#efc202] text-xl font-semibold mt-6 mb-2">Entrada vehicular</h2>
+                <a class=" text-white">Av. Presidente Riesco 4601</a>
+            </div>
+
+        </div>
+        <i class="fa-solid fa-star text-[#edb901] absolute right-[49px] bottom-[70px] text-xl"></i>
+
+        <img src="./Docs/Assets/top.svg" class="absolute right-5 bottom-0 cursor-pointer" id="scrollToTop" alt="">
+    </div>
+    <p class="bg-black text-white md:text-lg p-5 text-right">Políticas de Privacidad.</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="./Docs/Javascripts/global.js"></script>
+</body>
+
+</html>
