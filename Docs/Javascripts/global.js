@@ -51,19 +51,23 @@ document.addEventListener('alpine:init', () => {
   }));
 })
 
-openSearch.addEventListener('click',()=>{
+openSearch.addEventListener('click', () => {
   searchPopup.style.width = "100%"
   searchPopup.style.opacity = "1"
+    wheelPopup.style.width = "0"
+  wheelPopup.style.opacity = "0"
 })
-closeSearch.addEventListener('click',()=>{
+closeSearch.addEventListener('click', () => {
   searchPopup.style.width = "0"
   searchPopup.style.opacity = "0"
 })
-openwheel.addEventListener('click',()=>{
+openwheel.addEventListener('click', () => {
   wheelPopup.style.width = "100%"
   wheelPopup.style.opacity = "1"
+  searchPopup.style.width = "0"
+  searchPopup.style.opacity = "0"
 })
-closewheel.addEventListener('click',()=>{
+closewheel.addEventListener('click', () => {
   wheelPopup.style.width = "0"
   wheelPopup.style.opacity = "0"
 })
