@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="shortcut icon" href="/Docs/Assets" type="image/x-icon">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.1.13/dist/lenis.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./Docs/Styles/global.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script defer src="https://unpkg.com/alpinejs@3.2.3/dist/cdn.min.js"></script>
+</head>
+
+<body class="overflow-x-hidden">
+
+    <div class="md:min-h-[12rem] min-h-[7rem] z-50 w-full flex flex-col items-center justify-center relative"
+        style="background: url(./Docs/Assets/img12.jpg) center/cover no-repeat ;">
+
+        <div id="searchPopup" style="width: 0; opacity: 0; "
+            class="top-0 transition-all duration-500 left-0 p-7 absolute bg-[#ffc700] z-30">
+            <div class="max-w-6xl flex items-center justify-center gap-10 w-full mx-auto ">
+
+                <div class="border-b-2 border-black flex items-center w-full">
+                    <input type="text" class="bg-transparent py-2 w-full placeholder:text-zinc-600"
+                        placeholder="Aué estås buscando?">
+                    <i class="fa-solid fa-search text-xl pr-3"></i>
+                </div>
+                <i class="fa-solid fa-x text-xl pr-3 cursor-pointer" id="closeSearch"></i>
+            </div>
+        </div>
+        <div id="wheelPopup" style="width: 0; opacity: 0; "
+            class="top-0 transition-all duration-500 left-0 p-7 absolute bg-[#ffc700] z-30">
+            <div class="max-w-6xl flex items-center justify-center gap-10 w-full mx-auto ">
+                <div class=" flex justify-center gap-5 items-center w-full">
+                    <div class="flex items-center flex-col gap-1">
+                        <p>Contraste</p>
+                        <img src="./Docs/Assets/img9.webp" class="pr-4" alt="">
+                    </div>
+                    <div class="flex items-center flex-col gap-1">
+                        <p>Tamaño de fuente</p>
+                        <div class="flex items-center gap-3">
+                            <img src="./Docs/Assets/img10.webp" class="pr-4" alt="">
+                            <img src="./Docs/Assets/img11.webp" class="pr-4" alt="">
+                        </div>
+                    </div>
+                </div>
+                <i class="fa-solid fa-x text-xl pr-3 cursor-pointer" id="closewheel"></i>
+            </div>
+        </div>
+        <div class="mx-auto max-w-7xl p-5 relative z-40 w-full h-[80px] flex items-center justify-between">
+            <a href="./index.html">
+                <img src="./Docs/Assets/logo.webp" class="md:h-24 h-16" alt="">
+            </a>
+            <div class="lg:flex hidden items-center justify-center bg-black -skew-x-[20deg]">
+                <ul class="text-white flex  items-center  justify-center skew-x-[20deg]">
+                    <li class=" bg-black  rek cursor-pointer -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 text-sm  py-5 skew-x-[20deg] font-semibold">
+                            Nuestra
+                            Escuela <i class="fa-solid fa-chevron-down transition-all  group-hover:rotate-180"></i>
+                        </div>
+
+                        <div
+                            class="absolute border top-[60px] left-[83px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
+                            <ul>
+                                <li><a class="block py-2 pt-4 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./saludo-del-Director.html">saludo del Director</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./misión-y-visión.html">Misi6n y visi6n</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Historia.html">Historia</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Himno.html">Himno</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./InFraestructura.html">Infraestructura</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Himnos-y-cantos-militates.html">Himnos y cantos militates</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Anuarios.html">Anuarios</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Nuestro-Personal.html">Nuestro Personal</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Trabaja-con-nosotros.html">Trabaja con nosotros</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./streaming-Admisi6n-2023.html">streaming Admisi6n 2023</a></li>
+                                <li><a class="block py-2 pb-4 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Entrega-de-Espadines-2023.html">Entrega de Espadines 2023</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="cursor-pointer bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 text-sm  py-5 skew-x-[20deg] font-semibold">
+                            vinculaci6n
+                            con el Medio <i class="fa-solid fa-chevron-down transition-all  group-hover:rotate-180"></i>
+                        </div>
+
+                        <div
+                            class="absolute border top-[60px] left-[30px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
+                            <ul>
+                                <li><a class="block py-2 pt-4 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./publicaciones.html">publicaciones</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Exalumnos.html">Exalumnos</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Ventanas-culturales.html">Ventanas culturales</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Modelo-VCM.html">modelo vcm</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class="cursor-pointer bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 text-sm  py-5 skew-x-[20deg] font-semibold">
+                            InFormaci6n
+                            Académica <i class="fa-solid fa-chevron-down transition-all  group-hover:rotate-180"></i>
+                        </div>
+
+                        <div
+                            class="absolute border top-[60px] left-[52.5px] rounded-b-lg hidden group-hover:block fastFadeIn w-60 bg-white  skew-x-[20deg] overflow-hidden text-center text-black">
+                            <ul>
+                                <li><a class="block py-2 pt-4 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./perFil-del-0Ficial.html">PerF11 del oftaal</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Plan-de-Estudios-Regular.html">Plan de Estudios Regular</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Plan-de-Estudio-CAOT.html">Plan de Estudio CAOT</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Plan-de-Estudio-CAOB.html">Plan de Estudio CAOB</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Plan-de-Estudio-CAOSP.html">Plan de Estudio CAOSP</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./Proyecto-Educativo.html">Proyecto Educativo</a></li>
+                                <li><a class="block py-2 transition-all duration-500 hover:bg-black hover:text-white"
+                                        href="./modelo-pedag6gico.html">modelo pedag6gico</a></li>
+                            </ul>
+                        </div>
+
+                    </li>
+                    <li class=" bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div> <a href="./Noticias.html"
+                            class="block group-hover:text-black transition-all duration-500 px-4 text-sm py-5  skew-x-[20deg] font-semibold">Noticias</a>
+                    </li>
+                    <li id="openSearch" class="cursor-pointer bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 py-[17.9px]  skew-x-[20deg]">
+                            <i class="fa-solid fa-binoculars "></i>
+                        </div>
+                    </li>
+                    <li id="openwheel" class="cursor-pointer bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div>
+                        <div
+                            class="block group-hover:text-black transition-all duration-500 px-4 py-[17.9px]  skew-x-[20deg]">
+                            <i class="fa-solid fa-wheelchair "></i>
+                        </div>
+                    </li>
+                    <li class=" bg-black -skew-x-[20deg] group">
+                        <div
+                            class="group-hover:w-full h-full transition-all duration-500 w-0 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div> <a href=""
+                            class="block group-hover:text-black transition-all duration-500 px-4 py-[17.9px]  skew-x-[20deg]">
+                            <i class="fa-solid fa-user-secret "></i></a>
+                    </li>
+                    <li class=" bg-black -skew-x-[20deg] group">
+                        <div
+                            class="w-full h-full transition-all duration-500 overflow-hidden absolute top-0 left-0 bg-[#edb901]">
+                        </div> <a href="" class="flex flex-col items-center 
+                            text-black transition-all duration-500 px-4 py-[5.9px]  skew-x-[20deg]">
+                            <img src="./Docs/Assets/star.svg" class="h-6" alt="">
+                            Admisi6n</a>
+                    </li>
+                </ul>
+            </div>
+
+            <i id="openNav"
+                class="fa-solid fa-bars bg-zinc-900 lg:hidden text-white px-3 rounded-lg cursor-pointer py-1.5 text-xl"></i>
+        </div>
+
+
+        <!-- responsive nav -->
+
+        <div id="resNav" style="width: 0%;"
+            class="fixed transition-all duration-500 xl:hidden overflow-hidden top-0 left-0 w-full h-screen bg-black text-white z-50">
+            <div class="">
+                <div class="flex p-5 items-center justify-between">
+                    <a href="./index.html">
+                        <img src="./Docs/Assets/logo.webp" class="h-16" alt="">
+                    </a>
+                    <i class="fa-solid fa-x text-xl pr-3" id="closeNav"></i>
+                </div>
+                <ul class="flex flex-col mt-1 fadeIn font-medium max-h-[80vh] overflow-auto">
+                    <main class="">
+                        <div class="flex justify-center items-start my-2">
+                            <div class="w-full my-1">
+                                <ul class="flex flex-col">
+                                    <li class="border-b-2 py-2 text-[#edb901] duration-500 transition-all"
+                                        x-data="accordion(1)">
+                                        <h2 @click="handleClick()"
+                                            class="flex flex-row justify-between items-center font-semibold p-3 gap-2 cursor-pointer">
+                                            <span class="text-nowrap">Nuestra Escuela</span>
+                                            <i :class="handleRotate()"
+                                                class="fa-solid transition-all duration-500 fa-angle-down text-[#edb901]"></i>
+                                        </h2>
+                                        <div x-ref="tab" :style="handleToggle()"
+                                            class=" overflow-hidden max-h-0 duration-500 transition-all">
+                                            <ul class="pl-5 p-3 space-y-2 flex text-sm flex-col gap-3 text-white">
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./saludo-del-Director.html"> saludo del
+                                                        Director</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./misión-y-visión.html"> Misi6n y
+                                                        visi6n</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Historia.html">
+                                                        Historia</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Himno.html">
+                                                        Himno</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./InFraestructura.html">
+                                                        Infraestructura</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Himnos-y-cantos-militates.html"> Himnos y cantos
+                                                        militates</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Anuarios.html">
+                                                        Anuarios</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Nuestro-Personal.html"> Nuestro
+                                                        Personal</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Trabaja-con-nosotros.html"> Trabaja con
+                                                        nosotros</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./streaming-Admisi6n-2023.html"> streaming Admisi6n
+                                                        2023</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Entrega-de-Espadines-2023.html"> Entrega de
+                                                        Espadines 2023</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="border-b-2 py-2 text-[#edb901] duration-500 transition-all"
+                                        x-data="accordion(2)">
+                                        <h2 @click="handleClick()"
+                                            class="flex flex-row justify-between items-center font-semibold p-3 gap-2 cursor-pointer">
+                                            <span class="text-nowrap">vinculaci6n con eI Medio</span>
+                                            <i :class="handleRotate()"
+                                                class="fa-solid transition-all duration-500 fa-angle-down text-[#edb901]"></i>
+                                        </h2>
+                                        <div x-ref="tab" :style="handleToggle()"
+                                            class=" overflow-hidden max-h-0 duration-500 transition-all">
+                                            <ul class="pl-5 p-3 space-y-2 flex text-sm flex-col gap-3 text-white">
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./publicaciones.html"> publicaciones</a>
+                                                </li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Exalumnos.html">
+                                                        Exalumnos</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Ventanas-culturales.html"> Ventanas
+                                                        Culturales</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a href="./Modelo-VCM.html">
+                                                        Modelo VCM</a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li class="border-b-2 py-2 text-[#edb901] duration-500 transition-all"
+                                        x-data="accordion(3)">
+                                        <h2 @click="handleClick()"
+                                            class="flex flex-row justify-between items-center font-semibold p-3 gap-2 cursor-pointer">
+                                            <span class="text-nowrap">InFormaci6n Académica</span>
+                                            <i :class="handleRotate()"
+                                                class="fa-solid transition-all duration-500 fa-angle-down text-[#edb901]"></i>
+                                        </h2>
+                                        <div x-ref="tab" :style="handleToggle()"
+                                            class=" overflow-hidden max-h-0 duration-500 transition-all">
+                                            <ul class="pl-5 p-3 space-y-2 flex text-sm flex-col gap-3 text-white">
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./publicaciones.html"> publicaciones</a>
+                                                </li>
+
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./perFil-del-0Ficial.html"> perFil del
+                                                        OFicial</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="Plan-de-Estudios-Regular.html"> Plan de Estudios
+                                                        Regular</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Plan-de-Estudio-CAOT.html"> Plan de Estudio
+                                                        CAOT</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Plan-de-Estudio-CAOB.html"> Plan de Estudio
+                                                        CAOB</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Plan-de-Estudio-CAOSP.html"> Plan de Estudio
+                                                        CAOSP</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./Proyecto-Educativo.html"> Proyecto
+                                                        Educativo</a></li>
+                                                <li class="border-b border-zinc-600 pb-1"><a
+                                                        href="./modelo-pedag6gico.html"> modelo
+                                                        pedag6gico</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    <li><a href="./Noticias.html"
+                                            class="font-semibold p-3 text-[#edb901] block">Noticias</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </main>
+                </ul>
+            </div>
+        </div>
+
+        <img src="./Docs/Assets/videoBottom.webp" class="w-full z-10 md:translate-y-5 absolute bottom-0 left-0" alt="">
+
+    </div>
+
+    <div class="max-w-7xl mx-auto md:py-16 py-8 p-5 relative overflow-hidden">
+
+        <div class="absolute md:block hidden  top-16 right-0">
+            <div class=" bg-[#fffae6] h-16 w-60 skew-x-[-30deg]"></div>
+            <div class="-translate-x-9   bg-[#ffcc00] h-16 w-60 skew-x-[-30deg]"></div>
+        </div>
+        <div class="absolute md:top-24 top-10 md:left-60 right-0 md:opacity-100 opacity-20 -z-10">
+            <div class=" bg-[#fffae6] h-16 w-20 skew-x-[-30deg]"></div>
+            <div class="-translate-x-9   bg-[#ffcc00] h-16 w-20 skew-x-[-30deg]"></div>
+        </div>
+
+        <div class="flex items-center gap-3  text-zinc-800">
+            <a href="./index.html" class="hover:underline font-medium">Inicio</a>
+            <i class="fa-solid fa-angle-right "></i>
+            <a href="./Historia.html" class="hover:underline font-medium">Historia</a>
+        </div>
+
+        <h2 class="md:text-4xl text-2xl font-bold z-10 relative mt-8">Historia</h2>
+
+        <div class="flex gap-3 my-4 md:mt-20 mt-10 items-center justify-end">
+            <p class="font-medium">Comparte en:</p>
+            <div
+                class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                <i class="fa-brands fa-facebook-f text-[#fff]  text-xl"></i>
+            </div>
+            <div
+                class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                <i class="fa-brands fa-twitter text-[#fff]  text-xl"></i>
+            </div>
+        </div>
+
+        <div class="max-w-5xl mx-auto md:mt-0 mt-8">
+
+            <img src="./Docs/Assets/man1.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+
+            <h2 class="md:text-xl font-medium pb-5">16 DE MARZO 1817 FUNDACIÓN DE LA ACADEMIA MILITAR</h2>
+            <p>El libertador General Bernardo O’Higgins Riquelme fundó junto a su Ministro de Guerra General José
+                Ignacio Zenteno del Pozo, la Academia Militar con el propósito de formar e instruir oficiales para
+                llenar las vacantes de los regimientos, cubrir los cuerpos de Milicias Cívicas y levantar un nuevo
+                Ejército en caso necesario. Los primeros uniformes de la Academia Militar fueron de influencia francesa.
+                El cadete lucía hasta la cintura una corta guerrera en su parte delantera que se alargaba ligeramente
+                hacia atrás como una levita. Morrión alto en su cabeza ( similar al de los granaderos españoles), La
+                primera promoción que ingresó a la Academia, estuvo formada por 102 cadetes. Varios de ellos argentinos.
+            </p>
+
+
+            <img src="./Docs/Assets/man2.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1818 BATALLA DE MAIPO </h2>
+            <p>La batalla de Maipú también conocida como La Batalla de Maipo, fue un enfrentamiento decisivo dentro del
+                contexto de la Guerra de la Independencia, tuvo lugar el 5 de abril de 1818, en el sector conocido como
+                los Cerrillos del Maipo y constituyó el bautismo de fuego para la recién formada Academia Militar.
+                Acudieron al campo de batalla 100 cadetes a los que hoy conocemos como “Las Cien Aguilas” bajo las
+                ordenes del General O`Higgins.
+            </p>
+
+            <img src="./Docs/Assets/man3.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1843 CAMBIO DE NOMBRE A ESCUELA MILITAR </h2>
+            <p>Durante el decenio del General Manuel Bulnes Prieto (1841-1851), se cambia de nombre de Academia Militar
+                por Escuela Militar. Período de noventa años aproximadamente de notoria influencia francesa, sin
+                embargo, no será hasta el año 1849, cuando ello definitivamente se concrete.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man4.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1866 INFLUENCIA FRANCESA </h2>
+            <p>El cadete viste largo levitón azul marino y alto quepís, que no alcanza a ser morrión como durante el
+                período de la Independencia de Chile. Prosigue la influencia francesa en las vestimentas del cadete en
+                los programas de enseñanza, sobresaliendo las asignaturas de Aritmética, la Métrica y la Oratoria.
+            </p>
+
+            <img src="./Docs/Assets/man5.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1878 PRIMEROS CAMBIOS EN EL PLAN DE ESTUDIOS</h2>
+            <p>El levitón se acorta levemente, prosiguiendo el alto quepís con “pon-pon” de color. Es un año de profunda
+                reformulación de los planes de estudio y reglamentos insertos en un establecimiento que cada vez se
+                hacía más estrecho de las necesidades de los alumnos que vivían internos en el cuartel.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man6.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1885 CONSTRUCCIÓN DEL PRIMER CUARTEL PERMANENTE “BLANCO ENCALADA”
+            </h2>
+            <p>A lo largo de su historia la Escuela Militar ha tenido un total de nueve cuarteles, siendo la mayoría de
+                ellos de carácter temporal. La Inauguración del nuevo cuartel ex profeso para la Escuela Militar, marca
+                un hito para el instituto ya que sería este su primer cuartel permanente. Ubicado en las proximidades
+                del ex Parque Cousiño y actual elipse del Parque O´Higgins, el antiguo cuartel Blanco Encalada se
+                mantuvo estrechamente ligado al Ejército y hoy alberga al Museo Histórico y Militar.
+                <br><br>
+                Sin embargo, “la vieja escuela” carecía de piscina y campo de tiro para la enseñanza de las
+                especialidades, la estrechez de espacio se hizo evidente lo que obligó a los mandos del alcázar a buscar
+                un nuevo sitio para ubicar a la Escuela.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man7.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">LA MISIÓN KÖRNER Y LA PRUSIANIZACIÓN
+            </h2>
+            <p>Los primeros oficiales alemanes llegaron en septiembre de 1885 liderados por el Capitán Emil Karl Theodor
+                Körner Henze. Heredero de una larga tradición militar prusiana, fue comandante del Ejército de Chile con
+                el grado de inspector general desde 1900 a 1910. Posteriormente arribaron al país, en forma paulatina,
+                44 instructores prusianos que formaron parte de la más capacitada oficialidad de la época.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man8.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1920 INFLUENCIA PRUSIANA
+            </h2>
+            <p>Cadete de la Academia Militar con uniforme de salida. Su guerrera azul Prusia es más sencilla respecto de
+                la francesa. En sus pecheras ya no existen los dorados hilos y hojas de laureles parisimo, bordados
+                exclusivamente en Francia. En este periodo en antiguo cuartel de Av. Blanco Encalada, el año escolar se
+                iniciaba con la asistencia de 216 cadetes.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man9.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1927 TRAGEDIA DE ALPATACAL
+            </h2>
+            <p>En la madrugada del 07 de julio de 1927, el tren que trasladaba a la Escuela Militar rumbo a Buenos Aires
+                invitada por el gobierno argentino para participar en las “Fiestas Julias”, fue impactado de frente por
+                otro convoy cerca de Mendoza. Quince militares entre cadetes, suboficiales, soldados y dragoneantes
+                perdieron la vida .
+
+
+            </p>
+
+            <img src="./Docs/Assets/man10.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1939 CREACIÓN DEL ESCUDO DE LA ESCUELA MILITAR
+            </h2>
+            <p>Siendo director el Coronel Arnaldo Carrasco Carrasco se oficializó por orden comando N·245 del 12 de
+                noviembre de 1939 el escudo oficial de la Escuela Militar. El escudo que perdura hasta hoy es obra de
+                Héctor Aravena González, profesor de arte del instituto que ganó el concurso concurso público para dotar
+                de un simbolo representativo a la Escuela Militar.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man11.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1942 PUBLICACIÓN DEL PRIMER CIEN AGUILAS
+            </h2>
+            <p>Los mandos de la Escuela estimaron pertinente crear un medio de difusión para las actividades del
+                instituto. Es así como a el 25 de abril de ese año aparece el primer número de esta revista cuya
+                publicación se mantiene hasta el día de hoy.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man12.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1943 PRIMERA PIEDRA DE NUESTRO ACTUAL CUARTEL
+            </h2>
+            <p>“En las afueras de Santiago” como se decía con respecto a la adquisición de la compra de terrenos en la
+                Hacienda de las Condes, más propiamente el fundo “San Luis” que la componía, se asentó el segundo
+                cuartel ad hoc para el funcionamiento de la Escuela Militar.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man13.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1944 CREACIÓN DEL HIMNO DEL CURSO MILITAR
+            </h2>
+            <p>El subalférez Enrique Astaburuaga Pumarino, compuso la letra recogiendo en ella parte importante de la
+                heroica historia de las “Cien Aguilas” , el arreglo musical lo hizo el Suboficial Mayor Santiago Mekled
+                Mortus quien adaptó para el himno la marcha alemana “Fuego de Artificio”.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man14.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1945 PRIMERA OLIMPIADA DE ESCUELAS MATRICES
+            </h2>
+            <p>Se integra por primera vez la Escuela de Aviación a la competencia deportiva celebrada año a año desde
+                1939 entre la Escuela Militar y la Escuela Naval. Entre los días 22 al 30 de septiembre de 1945 se
+                desarrolló esta competencia Inter-Escuelas matrices apuntada a fortalecer los lazos de camaradería y
+                amistad entre los cadetes militares, navales y aéreos.
+            </p>
+
+            <img src="./Docs/Assets/man2.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1955 TRASLADO AL ACTUAL CUARTEL
+            </h2>
+            <p>Entre 1955 y 1958, al mando de su Director Coronel Ricardo Lecaros, abandonó definitivamente el cuartel
+                de Blanco Encalada para instalarse en su nuevo edificio de Las Condes. El cambio implicó espacios más
+                grandes, áreas verdes y campos deportivos dentro de la propia Escuela. Sus salas de clases y
+                laboratorios hicieron del establecimiento uno de los mejores del país.
+            </p>
+
+            <img src="./Docs/Assets/man15.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1965 CAMBIO EN EL PLAN DE ESTUDIOS
+            </h2>
+            <p>Durante los años sesenta y de acuerdo a las nuevas tendencias en materia de educación, la Dirección de
+                Instrucción del Ejército y el Ministerio de Educación aprueban un nuevo plan de estudios que contemplaba
+                un primer ciclo secundario-preuniversitario de tres años y un segundo ciclo a nivel universitario de dos
+                años.
+            </p>
+
+            <img src="./Docs/Assets/man16.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1971 INAUGURACIÓN DE LA PISCINA Y EL MUSEO
+            </h2>
+            <p>Siendo Director el Coronel Alberto Labbé Troncoso se inauguró la piscina olímpica exterior y el Museo del
+                instituto. Es precisamente en el Museo donde se conservan algunas notables piezas históricas como la
+                Bandera Chilena que flameo en la batalla de la Concepción.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man17.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1976 FINALIZA CONSTRUCCIÓN MONUMENTO A O´HIGGINS
+            </h2>
+            <p>El Padre de la Patria y fundador de este plantel custodia nuestro plantel desde su sitial de honor en el
+                frontis del instituto, junto a el arde la "Llama de la Libertad" .
+
+
+            </p>
+
+            <img src="./Docs/Assets/man18.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1978 CRISIS DEL BEAGLE
+            </h2>
+            <p>La tensión vivida en 1978 ante la crisis del Beagle llevó a Chile a vivir una de las situaciones más
+                cercanas a la guerra que se vivieron en siglo XX. Los efectos del conflicto se sintieron también en la
+                Escuela Militar que aumentó sus vacantes de ingreso de 200 a 400 alumnos y se modificó el plan
+                curricular potenciando aún más la instrucción de combate.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man19.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1979 DONACIÓN DEL PREDIO DE PICHICUY
+            </h2>
+            <p>La Escuela Militar recibe en donación el predio de Pichicuy por parte de la Corporación de la Reforma
+                Agraria. Es precisamente en este terreno donde hasta nuestros días la Escuela realiza sus principales
+                actividades de instrucción en terreno.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man20.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1990 CREACIÓN DEL BATALLÓN GERMANIA
+            </h2>
+            <p>La Escuela Militar crea el “Batallón Pampa Germania” que formaba parte del Curso Especial Adelantado de
+                Estudiantes (CEAE) destinado a que estudiantes secundarios cumpliesen con su Servicio Militar como
+                también a incentivar a los jóvenes a seguir la carrera militar. Durante un periodo de instrucción de 8
+                meses los Soldados Estudiantes recibían formación militar, valórica y física.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man21.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1995 LA MUJER EN LA ESCUELA MILITAR
+            </h2>
+            <p> Los primeros días de febrero el Alcázar recibe a las primeras mujeres en la historia del plantel,
+                asumiendo a partir de este momento la responsabilidad de formar a las futuras Oficiales de Ejército.
+                Este año y luego de pasar con éxito los respectivos exámenes médicos, físicos y académicos propios del
+                sistema de admisión, las primeras 20 reclutas femeninas comienzan su proceso formativo.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man22.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">1997 EXTENSION DE LA CARRERA MILITAR PARA LAS MUJERES</h2>
+            <p>A partir de este año se modifica el “Estatuto Administrativo de Personal de las Fuerzas Armadas”
+                extendiendo la carrera para las mujeres hasta los 30 años de servicio y creando una vacante especial
+                para ellas en el grado de Coronel.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man20.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">2001 PLANTEL DE EDUCACIÓN SUPERIOR
+            </h2>
+            <p>Cambios en la malla curricular y el proceso de modernización del Ejército, convierten a la Escuela
+                Militar en una institución de educación superior que entrega una licenciatura en Ciencias Militares. A
+                partir de esta fecha se debe ingresar con 4to medio y con la PAA o PSU rendidas.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man233.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">2005 PLANTEL DE EDUCACIÓN SUPERIOR
+            </h2>
+            <p>Pionera entre los institutos formadores de oficiales en las Fuerzas Armadas. Acredita pregrado en
+                Licenciaturas en Ciencias Militares y área de gestión institucional, ante la Comisión Nacional de
+                Acreditación.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man24.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">2005 ÚLTIMO BATALLÓN GERMANIA
+            </h2>
+            <p>En diciembre del 2005, en una solemne ceremonia, se acaba el CEAE licenciando a Soldados Estudiantes por
+                última vez en la Escuela Militar tras 15 años formando jóvenes en los valores del mérito, virtud y
+                patriotismo. Muchos de ellos ingresaron a la Escuela como cadetes o siguieron sirviendo en el Ejército a
+                través de la Reserva Militar.
+
+
+            </p>
+
+            <img src="./Docs/Assets/man25.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5">2007 MUJERES SE INTEGRAN A LA FILA POR PRIMERA VEZ
+            </h2>
+            <p>El año 2007 y por primera vez en la historia del Instituto, las cadetes femeninas dejaron de conformar
+                una unidad de formación aparte y pasaron a integrar las escuadras de fusileros vistiendo pantalón, casco
+                y mochila al igual que sus camaradas varones.
+            </p>
+            <h2 class="md:text-xl font-medium pb-5 md:mt-7 mt-5">2010 BICENTENARIO DE CHILE
+
+            </h2>
+            <p>El Bicentenario de Chile tuvo como fecha el 18 de septiembre de 2010. Su celebración conmemoró los 200
+                años del inicio del proceso de independencia de Chile, con la Primera Junta Nacional de Gobierno el 18
+                de septiembre de 1810, que luego de casi ocho años, acabaría transformando a Chile en un país libre e
+                independiente. La celebración correspondió a diversas actividades y planes nacionales que se fueron
+                preparando con varios años de anticipación.
+            </p>
+
+            <img src="./Docs/Assets/img44.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5 md:mt-7 mt-5">2015 ACREDITACIÓN DE LA ESCUELA MILITAR </h2>
+            <p>
+                Desde mayo de 2015 hasta mayo de 2020 se acreditó el pregrado de la carrera de Oficial de Ejército.
+            </p>
+            <img src="./Docs/Assets/img45.jpg" class=" w-full mx-auto rounded-md md:my-10 my-6" alt="">
+            <h2 class="md:text-xl font-medium pb-5 ">16 de marzo de 2017 BICENTENARIO DE LA ESCUELA MILITAR
+            </h2>
+            <p>
+                En una trascendental ceremonia encabezada por S.E la Presidenta de la República, señora Michelle
+                Bachelet Jeria, acompañada del Comandante en Jefe del Ejército, General Humberto Oviedo Arriagada, se
+                conmemoraron los 200 años de vida de la Escuela Militar del Libertador Bernardo O´Higgins Riquelme.
+                <br><br>
+                El emotivo acto incluyó la tradicional ceremonia de entrega de espadines a los cadetes de primer año y
+                la imposición por parte de S.E de la condecoración “Presidencia de la República” a los estandartes de
+                combate.
+                <br><br>
+                En esta especial celebración participaron también nueve delegaciones internacionales, representadas por
+                las escuelas matrices de sus Ejércitos además de personal de las escuelas de Naval, Aviación y
+                Carabineros. Cabe destacar que todas estas se unieron al desfile conmemorativo que selló la ceremonia
+                con la compañía de cadetes recién ingresados a la Escuela Militar.
+            </p>
+            <div class="w-full border-b-2 border-[#edb901] bg-gradient-to-t from-[#faedb2] to-[#fff] mt-8 md:h-16 h-10">
+            </div>
+        </div>
+    </div>
+
+    <div class="bg-[#5d5d5d] w-full p-4 relative">
+        <img src="./Docs/Assets/grayBootom.webp" class="w-full absolute md:-top-5 -top-1 rotate-180  left-0" alt="">
+        <div class="max-w-4xl w-full mx-auto gap-8 md:py-10 py-6 flex md:flex-row flex-col justify-center items-center">
+            <div class="flex items-center gap-3">
+                <i class="fa-solid fa-star text-lg text-[#edb901]"></i>
+                <p class="text-white md:text-lg font-semibold">
+                    Medalla SÍGUENOS EN REDES SOCIALES:
+                </p>
+            </div>
+            <div class="flex items-center gap-3">
+                <div
+                    class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                    <i class="fa-brands fa-facebook-f text-[#5d5d5d]  text-xl"></i>
+                </div>
+                <div
+                    class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                    <i class="fa-brands fa-twitter text-[#5d5d5d]  text-xl"></i>
+                </div>
+                <div
+                    class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                    <i class="fa-brands fa-instagram text-[#5d5d5d]  text-2xl"></i>
+                </div>
+                <div
+                    class="w-12 transition-all duration-500 hover:scale-105 h-12 rounded-full flex items-center bg-[#edb901] justify-center">
+                    <i class="fa-brands fa-youtube text-[#5d5d5d]  text-xl"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full relative p-5" style="background: url(./Docs/Assets/footer.png) center/cover no-repeat;">
+        <img src="./Docs/Assets/grayBootom.webp" class="w-full absolute top-0 left-0" alt="">
+
+        <div class="max-w-6xl w-full md:py-14 py-8 mx-auto md:grid-cols-3 grid-cols-1 grid gap-3">
+            <div class="w-full">
+                <h2 class="text-[#efc202] text-xl font-semibold mb-6">Accesos a links importantes</h2>
+                <a href="./index.html" class=" text-white hover:underline">Inicio</a> <br>
+                <a href="./Noticias.html" class=" text-white hover:underline mt-1.5">Noticias</a>
+            </div>
+            <div class="w-full">
+                <h2 class="text-[#efc202] text-xl font-semibold mb-6">&nbsp; </h2>
+                <a href="./misión-y-visión.html" class=" text-white hover:underline">Misiön y Visiön</a> <br>
+                <a href="./Plan-de-Estudios-Regular.html" class=" text-white hover:underline mt-1.5">Plan de Estudios
+                    Regular</a>
+            </div>
+            <div class="w-full">
+                <h2 class="text-[#efc202] text-xl font-semibold mb-6">Contáctanos</h2>
+                <div class="flex items-center text-white gap-3">
+                    <i class="fa-solid fa-phone   text-lg"></i>
+                    <a href="" class=" hover:underline">Fono: 2 2661 5000</a> <br>
+                </div>
+                <h2 class="text-[#efc202] text-xl font-semibold mt-6 mb-2">Entrada peatonal</h2>
+                <a class=" text-white">Av. Los Militares 4500</a>
+                <h2 class="text-[#efc202] text-xl font-semibold mt-6 mb-2">Entrada vehicular</h2>
+                <a class=" text-white">Av. Presidente Riesco 4601</a>
+            </div>
+
+        </div>
+        <i class="fa-solid fa-star text-[#edb901] absolute right-[49px] bottom-[70px] text-xl"></i>
+
+        <img src="./Docs/Assets/top.svg" class="absolute right-5 bottom-0 cursor-pointer" id="scrollToTop" alt="">
+    </div>
+    <p class="bg-black text-white md:text-lg p-5 text-right">Políticas de Privacidad.</p>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="./Docs/Javascripts/global.js"></script>
+</body>
+
+</html>
